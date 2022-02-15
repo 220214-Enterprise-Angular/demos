@@ -41,3 +41,51 @@
     - [For Loop](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/operators-and-control-flow/src/com/revature/main/Driver.java#L93-L98)
     - [While loop](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/operators-and-control-flow/src/com/revature/main/Driver.java#L101-L107)
     - [Do-while loop](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/operators-and-control-flow/src/com/revature/main/Driver.java#L110-L118)
+
+# Questions
+* What exactly makes Java "platform independent"?
+* Why is Java both a compiled and interpreted language?
+* What is source code? What is the extension for a file that contains Java source code?
+* What does the compiler do?
+* Where is the compiler contained? Is it contained in the JDK, JRE, or JVM?
+* Can you run a Java program by only having a JRE installed?
+* What is bytecode? What is the extension for the file that contains bytecode
+* Explain the difference/relations between the JDK, JRE, and JVM
+* What executes the bytecode?
+* What is the method signature for the "main" method, and why is the main method important?
+* What two types of variables exist in Java?
+* What primitives does Java have?
+* What variables can hold decimal numbers, and which one is the most precise?
+* What are common operators in Java?
+* What are the logical operators?
+* What are the assignment operators?
+* What are the comparison operators?
+* What are the arithmetic operators?
+* What are some characteristics of a programming language?
+* What is control flow?
+* How do if statements work?
+* What is else if?
+* What is else?
+* What is a switch statement?
+* What datatypes does switch support?
+* What loops exist in Java?
+* What is the syntax for a for loop?
+* What is the syntax for a while loop?
+* How is a while loop different than a do-while loop?
+* What are the naming conventions for a class, variable, and method respectively? What about the naming convention for a constant?
+* How do we declare a constant?
+* What is primitive casting? What are the 2 types of primitive casting?
+* Which type of primitive casting is implicit?
+* What type of primitive casting is explicit?
+* What is the difference between a class and object?
+* What are the members of a class?
+* What does a field represent in a class?
+* What does a method represent in a class?
+* How do you instantiate an object?
+* What is a default constructor?
+* If you define a constructor, what do you typically write inside of the constructor?
+* If you define your own constructor, does the compiler still provide a default constructor?
+* What is the structure of a method? (method signature)
+* How do you use a ternary operator?
+* What is a String?
+
