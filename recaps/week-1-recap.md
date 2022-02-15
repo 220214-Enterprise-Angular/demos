@@ -9,3 +9,35 @@
     - [image link](./week-1-images/compilation-process.JPG)
 - Some characteristics of a programming language
     - [image link](./week-1-images/programming-language-characteristics.JPG)
+- First Program
+    - Use `javac SodaCan.java` to compile
+    - Use `java SodaCan` to run
+    - [link](https://github.com/220214-Enterprise-Angular/demos/tree/main/week-1/my-first-program)
+- 8 Primitive Types
+    - [link](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/datatypes/src/com/revature/main/Driver.java#L17-L27)
+- Primitive Casting
+    - Widening
+    - Narrowing
+    - [link](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/datatypes/src/com/revature/main/Driver.java#L46-L56)
+- Constants
+    - [link](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/datatypes/src/com/revature/main/Driver.java#L63-L74)
+- Naming conventions
+    - [link](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/datatypes/src/com/revature/main/Driver.java#L76-L90)
+- Introduction to Classes and Objects
+    - Class members
+        - [properties/fields](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/classes-and-objects/src/com/revature/model/SportsCar.java#L10-L17)
+        - [behaviors/methods](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/classes-and-objects/src/com/revature/model/SportsCar.java#L39-L52)
+        - [constructors](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/classes-and-objects/src/com/revature/model/SportsCar.java#L19-L37)
+    - [SportsCar example](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/classes-and-objects/src/com/revature/main/Driver.java#L15-L19)
+    - [Calculator example](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/classes-and-objects/src/com/revature/main/Driver.java#L21-L27)
+- Operator Types
+    - [link](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/operators-and-control-flow/src/com/revature/main/Driver.java#L7-L13)
+    - [ternary operator](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/operators-and-control-flow/src/com/revature/main/Driver.java#L18)
+- Control Flow
+    - [if](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/operators-and-control-flow/src/com/revature/main/Driver.java#L39-L41)
+    - [if-else](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/operators-and-control-flow/src/com/revature/main/Driver.java#L43-L49)
+    - [if-else if-else](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/operators-and-control-flow/src/com/revature/main/Driver.java#L51-L59)
+    - [Switch statement](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/operators-and-control-flow/src/com/revature/main/Driver.java#L61-L87)
+    - [For Loop](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/operators-and-control-flow/src/com/revature/main/Driver.java#L93-L98)
+    - [While loop](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/operators-and-control-flow/src/com/revature/main/Driver.java#L101-L107)
+    - [Do-while loop](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/operators-and-control-flow/src/com/revature/main/Driver.java#L110-L118)
