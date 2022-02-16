@@ -136,5 +136,31 @@
 * How do you use a ternary operator?
 * What is a String?
 ---
-
-
+* What is Git?
+* What is the difference between Git and GitHub?
+* What commands do you use in a typical Git workflow?
+* What is a commit?
+* How do you "upload" the latest commits on your local repository to the remote repository?
+* If there is a remote repository that you would like to copy to your computer, what command allows you to do that?
+* What are some of the common linux commands you may use?
+* Where are variables declared inside of a method stored?
+* Where are objects that are instantiated stored?
+* What is the String pool?
+* Are all Strings stored in the String pool? If not, what Strings are actually stored in the String pool?
+* What are some of the common methods you might use when working with Strings?
+* How might you iterate through a String's characters?
+* What is StringBuilder and StringBuffer? What is the difference between the two?
+* Why is String concatenation not efficient?
+* What is a wrapper class? What are some examples?
+* What is the purpose of a wrapper class?
+* What 4 variable scopes exist in Java?
+* What are the 4 access modifiers from most restrictive to least restrictive?
+* What is a common purpose of the Scanner class?
+* What is an array?
+* How are the elements of an array stored in memory?
+* Why is accessing an element by its index O(1)? (constant regardless of the size of the array?)
+* How do you iterate over all of the elements in an array?
+* Syntax for instantiating an array with pre-defined values?
+* Syntax for instantiating an array WITHOUT pre-defined values?
+* What are var-args?
+* What is Encapsulation? Describe getters/setters?
