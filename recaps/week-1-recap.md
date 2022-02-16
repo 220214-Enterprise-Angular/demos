@@ -42,6 +42,28 @@
     - [While loop](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/operators-and-control-flow/src/com/revature/main/Driver.java#L101-L107)
     - [Do-while loop](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/operators-and-control-flow/src/com/revature/main/Driver.java#L110-L118)
 
+# Day 2
+- Git introduction
+    - [image](./week-1-images/git-introduction.JPG)
+- Common linux commands
+    - [image](./week-1-images/common-linux-commands.JPG)
+- Memory management
+    - [stack v. heap](./week-1-images/memory-management.JPG)
+    - [String pool](./week-1-images/string-pool.JPG)
+- String Demo
+    - [link](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/string-demo/src/com/revature/main/Driver.java)
+    - [s referencing a String in String pool](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/string-demo/src/com/revature/main/Driver.java#L11-L14)
+    - [String instantiated in the regular part of the heap](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/string-demo/src/com/revature/main/Driver.java#L19-L20)
+    - [.concat(), .length(), .startsWith(), .endsWith()](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/string-demo/src/com/revature/main/Driver.java#L28-L39)
+    - [Ways to iterate through the characters of a String](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/string-demo/src/com/revature/main/Driver.java#L41-L67)
+- StringBuilder and StringBuffer
+    - [image](./week-1-images/stringbuilder-stringbuffer.JPG)
+    - [reversing String with StringBuilder](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/reverse-a-string/src/com/revature/main/Driver.java#L56-L66)
+    - [reversing String with String concatenation (INEFFICIENT)](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/reverse-a-string/src/com/revature/main/Driver.java#L37-L49)
+- Wrapper Classes
+    - [link](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/wrapper-class-demo/src/com/revature/main/Driver.java#L25-L90)
+    
+
 # Questions
 * What exactly makes Java "platform independent"?
 * Why is Java both a compiled and interpreted language?
