@@ -62,7 +62,32 @@
     - [reversing String with String concatenation (INEFFICIENT)](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/reverse-a-string/src/com/revature/main/Driver.java#L37-L49)
 - Wrapper Classes
     - [link](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/wrapper-class-demo/src/com/revature/main/Driver.java#L25-L90)
-    
+- Variable Scopes
+    - [image](./week-1-images/variable-scopes.JPG)
+    - [global/static scope](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/variable-scopes/src/com/revature/main/Person.java#L7-L8)
+    - [instance scope](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/variable-scopes/src/com/revature/main/Person.java#L10-L15)
+    - [method scope](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/variable-scopes/src/com/revature/main/Person.java#L30-L31)
+    - [block scope (2 examples)](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/variable-scopes/src/com/revature/main/Person.java#L35-L41)
+- Access Modifiers
+    - [image](./week-1-images/access-modifiers.JPG)
+    - [demo](https://github.com/220214-Enterprise-Angular/demos/tree/main/week-1/access-modifier-demo)
+- Scanner Class
+    - Often used for console input from the user
+    - [demo](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/scanner-demo/src/com/revature/main/Driver.java#L11-L25)
+- Arrays
+    - [image](./week-1-images/arrays.JPG)
+    - [instantiating an array w/ no predefined values](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/array-demo/src/com/revature/main/Driver.java#L15-L19)
+    - [assigning values 1 by 1 and iterating over the array](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/array-demo/src/com/revature/main/Driver.java#L29-L37)
+    - [using for-each loop w/ array](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/array-demo/src/com/revature/main/Driver.java#L39-L42)
+    - [instantiate an array w/ PREDEFINED values](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/array-demo/src/com/revature/main/Driver.java#L45)
+    - [multi-dimensional array](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/array-demo/src/com/revature/main/Driver.java#L54-L80)
+- Var-args
+    - [demo](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/array-demo/src/com/revature/main/Driver.java#L87-L101)
+    - [using var-args](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/array-demo/src/com/revature/main/Driver.java#L83-L84)
+- Encapsulation
+    - [image](./week-1-images/encapsulation.JPG)
+    - [private fields](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/encapsulation-demo/src/com/revature/model/Person.java#L11-L13)
+    - [getters and setters](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/encapsulation-demo/src/com/revature/model/Person.java#L24-L53)
 
 # Questions
 * What exactly makes Java "platform independent"?
