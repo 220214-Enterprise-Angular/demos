@@ -207,3 +207,28 @@
 * Syntax for instantiating an array WITHOUT pre-defined values?
 * What are var-args?
 * What is Encapsulation? Describe getters/setters?
+---
+* What is inheritance?
+* What does a child/subclass inherit from the parent class?
+* Inside of the child class constructor, what is the purpose of super(...)?
+* Is it possible for a class to have multiple parent classes?
+* What is polymorphism?
+* Is method overriding runtime or compile time polymorphism? Why?
+* What are the requirements for a method to be considered overridden?
+* What are the requirements for a method to be considered overloaded?
+* What is a "covariant" return type as it relates to method overriding?
+* What is the Object class?
+* What 3 methods should you be aware of that may need to overridden from the Object class?
+* What is the purpose of toString()?
+* What is the purpose of equals()?
+* What is the purpose of hashCode()?
+* == v. equals?
+* What classes are part of the Throwable hierarchy?
+* What is a stack trace?
+* What blocks can you use when handling exceptions?
+* throw v. throws v. Throwable?
+* How do you create a custom CHECKED exception?
+* How do you create a custom UNCHECKED exception?
+* What 3 notations are used for asymptotic analysis of algorithms?
+* What is a list? How is it different than an Array?
+* How would you approach implementing a your own array list?
