@@ -89,6 +89,49 @@
     - [private fields](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/encapsulation-demo/src/com/revature/model/Person.java#L11-L13)
     - [getters and setters](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/encapsulation-demo/src/com/revature/model/Person.java#L24-L53)
 
+# Day 3
+- [Analysis of reversing string algorithms](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/reverse-string-implementations/src/com/revature/Driver.java#L283-L325)
+- Inheritance
+    - [image](./week-1-images/inheritance.JPG)
+    - [superclass / parent class](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/inheritance-demo/src/com/revature/model/Animal.java#L3-L38)
+    - [subclass / child class](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/inheritance-demo/src/com/revature/model/Dog.java#L5-L36)
+- Polymorphism
+    - [image](./week-1-images/polymorphism.JPG)
+    - [runtime polymorphism](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/polymorphism-demo/src/com/revature/main/Driver.java#L17-L39)
+    - [compile time polymorphism](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/polymorphism-demo/src/com/revature/main/Driver.java#L41-L52)
+    - [method overriding](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/polymorphism-demo/src/com/revature/model/Dog.java#L5-L21)
+    - [method overloading](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/polymorphism-demo/src/com/revature/model/Calculator.java#L8-L43)
+- Object class
+    - [image (overview)](./week-1-images/object-class.JPG)
+    - [image (hashCode and equals)](./week-1-images/hashcode-and-equals.JPG)
+    - [image (conceptual hashmap)](./week-1-images/hashcode-and-hashmap.JPG)
+    - [overriding toString(), equals(), and hashCode()](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/object-class-demo/src/com/revature/model/Person.java#L26-L53)
+    - [toString()](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/object-class-demo/src/com/revature/main/Driver.java#L13-L16)
+    - [== v. .equals()](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/object-class-demo/src/com/revature/main/Driver.java#L20-L24)
+- Throwable Hierarchy
+    - [image](./week-1-images/throwable-hierarchy.JPG)
+- Reading a stack trace
+    - [image](./week-1-images/stack-trace.JPG)
+- Handling Exceptions
+    - [image](./week-1-images/handling-exceptions.JPG)
+- throw v. throws v. Throwable
+    - [image](./week-1-images/throw-throws-throwable.JPG)
+- Exception demo
+    - [declaring an exception using throws keyword](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/exception-demo/src/com/revature/main/Driver.java#L37)
+    - [propagating an exception using throw keyword](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/exception-demo/src/com/revature/main/Driver.java#L40)
+    - [handling exception using catch block](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/exception-demo/src/com/revature/main/Driver.java#L27-L28)
+- Cracking the Coding Interview Problem 1.1
+    - [problem statement](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/ctci-1-1/src/com/revature/Driver.java#L9-L10)
+    - [bruteforce O(n^2)](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/ctci-1-1/src/com/revature/Driver.java#L61-L70)
+    - [using sorting without additional data structure to achieve O(n log n)](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/ctci-1-1/src/com/revature/Driver.java#L38-L59)
+    - [using a data structure to achieve O(n)](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/ctci-1-1/src/com/revature/Driver.java#L22-L35)
+- Asymptotic Notation
+    - [image](./week-1-images/asymptotic-notation.JPG)
+- List
+    - [image](./week-1-images/list.JPG)
+- Implement a custom ArrayList
+    - [demo](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/arraylist-implementation/src/com/revature/main/MyIntegerArrayList.java)
+
 # Questions
 * What exactly makes Java "platform independent"?
 * Why is Java both a compiled and interpreted language?
