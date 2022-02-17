@@ -3,6 +3,9 @@
 * Assigned Date: 2/15/2022
 * Due Date: 3/2/2022
 
+You can use this Github Classrooms link to generate a basic scaffolding
+for the project: [link](https://classroom.github.com/a/u0qMlXPz)
+
 # Description
 Using Java 8, create an application that simulates simple banking transactions
 
