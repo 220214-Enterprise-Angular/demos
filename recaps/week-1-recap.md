@@ -132,6 +132,50 @@
 - Implement a custom ArrayList
     - [demo](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/arraylist-implementation/src/com/revature/main/MyIntegerArrayList.java)
 
+# Day 4
+- Amortized analysis of adding elements to ArrayList
+    - [image](./week-1-images/amortized-time-arraylist.JPG)
+- Git branching
+    - [image](./week-1-images/git-branching.JPG)
+- Linear search
+    - [image](./week-1-images/linear-search.JPG)
+    - [demo](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/search-algorithms-demo/src/com/revature/main/Driver.java#L36-L46)
+- Binary search
+    - [image](./week-1-images/binary-search.JPG)
+    - [demo](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/search-algorithms-demo/src/com/revature/main/Driver.java#L48-L66)
+- Recursion
+    - [image](./week-1-images/recursion.JPG)
+    - [SLOW demo](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/recursion-demo/src/com/revature/main/Driver.java#L28-L35)
+    - [FAST demo (with memoization)](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/recursion-demo/src/com/revature/main/Driver.java#L37-L49)
+- Implementing a stack (with array)
+    - [stack implementation class](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/stack-implementation/src/com/revature/main/MyIntegerStackImplementation.java)
+    - [creating stack objects and using them](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/stack-implementation/src/com/revature/main/Driver.java#L6-L33)
+- Abstraction
+    - [image](./week-1-images/abstraction.JPG)
+- ArrayList v. LinkedList
+    - [image](./week-1-images/arraylist-v-linkedlist.JPG)
+- Interfaces
+    - [notes](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/list-abstraction/src/com/revature/main/MyIntegerList.java#L8-L14)
+    - [MyIntegerList interface](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/list-abstraction/src/com/revature/main/MyIntegerList.java)
+    - [Inheritance of interface v. class](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/list-abstraction/src/com/revature/main/MyIntegerArrayList.java#L3-L7)
+    - [MyIntegerArrayList implements MyIntegerList](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/list-abstraction/src/com/revature/main/MyIntegerArrayList.java)
+    - [MyIntegerLinkedList implements MyIntegerList](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/list-abstraction/src/com/revature/main/MyIntegerLinkedList.java)
+    - [diagram of inheritance](./week-1-images/custom-list-inheritance-diagram.JPG)
+- Abstract Class
+    - [notes](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/abstract-class-demo/src/com/revature/model/Shape.java#L5-L11)
+    - [calculateArea() abstract method](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/abstract-class-demo/src/com/revature/model/Shape.java#L20-L22)
+    - [Square extends Shape](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/abstract-class-demo/src/com/revature/model/Square.java)
+    - [Triangle extends Shape](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/abstract-class-demo/src/com/revature/model/Triangle.java)
+    - [Circle extends Shape](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/abstract-class-demo/src/com/revature/model/Circle.java)
+    - [abstraction + polymorphism in action](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/abstract-class-demo/src/com/revature/main/Driver.java#L12-L22)
+- Collections API
+    - [hierarchy image](./week-1-images/collections-api-hierarchy.JPG)
+    - [common interview questions image](./week-1-images/collections-api-questions.JPG)
+    - [list demos](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/collections-api-demo/src/com/revature/main/Driver.java#L16-L57)
+    - [set demo](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/collections-api-demo/src/com/revature/main/Driver.java#L59-L74)
+    - [queue demo](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/collections-api-demo/src/com/revature/main/Driver.java#L76-L89)
+    - [Collections class demo](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/collections-api-demo/src/com/revature/main/Driver.java#L91-L113)
+
 # Questions
 * What exactly makes Java "platform independent"?
 * Why is Java both a compiled and interpreted language?
