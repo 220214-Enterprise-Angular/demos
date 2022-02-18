@@ -276,3 +276,27 @@
 * What 3 notations are used for asymptotic analysis of algorithms?
 * What is a list? How is it different than an Array?
 * How would you approach implementing a your own array list?
+---
+* What is amortized analysis?
+* How do you create new Git branches? Why?
+* What are the two search algorithms? What are the big O times of each?
+* How does binary search work?
+* What is recursion?
+* What are the rules of recursion?
+* What is memoization and how does it help to optimize recursion?
+* How would you approach implementing a stack?
+* What is abstraction?
+* What is the difference between how an ArrayList and LinkedList is structured? What are the big O times of some of their different operations?
+* What is an interface?
+* How many classes can a class extend? How many interfaces can a class implement?
+* Variables defined in an interface have what access modifier and what non-access modifiers?
+* Non-static methods in an interface always have what access modifier?
+* Can you have static methods in an interface?
+* What is an abstract class?
+* How is an abstract class different than a regular class / concrete class?
+* Can an abstract class and/or interface be instantiated? Why not?
+* When a regular class inherits an abstract method from an interface OR an abstract class, what does it need to do with that method?
+* Describe the Collections API hierarchy. What interfaces are there?
+* List v. Set v. Queue v. Map?
+* What is the difference between Collection and Collections?
+* What is the significance of the Iterable interface?
