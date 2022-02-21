@@ -317,3 +317,17 @@
 * List v. Set v. Queue v. Map?
 * What is the difference between Collection and Collections?
 * What is the significance of the Iterable interface?
+---
+* What are the different uses of the `final` keyword? What happens if you place final on a class, method, and variable?
+* If you have a final reference variable, does this mean that the object the variable is referencing is now immutable?
+* What is the purpose of the SOLID principles?
+* What are generics and what is an example of their usefulness? (think of the collections API)
+* What is Maven?
+* What is the important configuration file that Maven projects have?
+* What can go inside of the configuration file?
+* What is the purpose of testing?
+* What is the difference between a unit, integration, and E2E test?
+* What is JUnit?
+* What are some method-level annotations exist with JUnit?
+* What annotation do we use to make a particular method a test case?
+* What is the AAA acronym when setting up a test case?
