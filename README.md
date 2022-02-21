@@ -5,6 +5,8 @@ This is the training repository for the Java Enterprise/Angular cohort starting 
 
 ### The environment setup guide can be found [here](https://github.com/sophiagavrila/environment-setup)
 
+### Slides can be found [here](https://docs.google.com/presentation/d/1lOrz4BWbZO4tkQlK94SQ08ARVwq9n5bCRLMNoEXTtec/edit#slide=id.p)
+
 ---
 
 ## Training Recaps
