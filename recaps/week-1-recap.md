@@ -176,6 +176,23 @@
     - [queue demo](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/collections-api-demo/src/com/revature/main/Driver.java#L76-L89)
     - [Collections class demo](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/collections-api-demo/src/com/revature/main/Driver.java#L91-L113)
 
+# Day 5
+* Final Keyword
+    - [image](./week-1-images/final-keyword.JPG)
+* Solid Principles
+    - [image](./week-1-images/solid-principles.JPG)
+* Generics Demo
+    - [using a generic with custom ArrayList implementation](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/generics-demo/src/com/revature/main/Driver.java#L7)
+    - [MyArrayList implementation](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/generics-demo/src/com/revature/main/MyArrayList.java)
+* Maven Introduction
+    - [image](./week-1-images/maven-intro.JPG)
+* Testing Introduction
+    - [image](./week-1-images/testing-intro.JPG)
+* Testing Demo
+    - [pom.xml configuration with JUnit 5 (Jupiter) external dependency](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/testing-demo/pom.xml#L7-L20)
+    - [MathUtility isPrime(...) method](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/testing-demo/src/main/java/com/revature/utility/NumberUtility.java)
+    - [Writing unit tests](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/testing-demo/src/test/java/com/revature/utility/NumberUtilityTest.java)
+
 # Questions
 * What exactly makes Java "platform independent"?
 * Why is Java both a compiled and interpreted language?
