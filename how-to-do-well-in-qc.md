@@ -41,5 +41,6 @@ The exercise below should help you improve your answers in QC, one-on-ones, pane
 
 If you do this every week, at the end of training you will have a complete set of answers to each language, framework, and major concept you’ve covered. You can use these to improve the bullet points and written sections in your portfolio as well as prepare for the final, cumulative QC session. :shipit:
 
-# Credits
-Sophia Gavrila - Another Trainer at Revature
+### Credits
+Andrew Crenwelge - Lead Quality Analyst at Revature
+Sophia Gavrila - Senior Trainer at Revature
