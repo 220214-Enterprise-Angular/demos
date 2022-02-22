@@ -176,6 +176,23 @@
     - [queue demo](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/collections-api-demo/src/com/revature/main/Driver.java#L76-L89)
     - [Collections class demo](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/collections-api-demo/src/com/revature/main/Driver.java#L91-L113)
 
+# Day 5
+* Final Keyword
+    - [image](./week-1-images/final-keyword.JPG)
+* Solid Principles
+    - [image](./week-1-images/solid-principles.JPG)
+* Generics Demo
+    - [using a generic with custom ArrayList implementation](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/generics-demo/src/com/revature/main/Driver.java#L7)
+    - [MyArrayList implementation](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/generics-demo/src/com/revature/main/MyArrayList.java)
+* Maven Introduction
+    - [image](./week-1-images/maven-intro.JPG)
+* Testing Introduction
+    - [image](./week-1-images/testing-intro.JPG)
+* Testing Demo
+    - [pom.xml configuration with JUnit 5 (Jupiter) external dependency](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/testing-demo/pom.xml#L7-L20)
+    - [MathUtility isPrime(...) method](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/testing-demo/src/main/java/com/revature/utility/NumberUtility.java)
+    - [Writing unit tests](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/testing-demo/src/test/java/com/revature/utility/NumberUtilityTest.java)
+
 # Questions
 * What exactly makes Java "platform independent"?
 * Why is Java both a compiled and interpreted language?
@@ -300,3 +317,17 @@
 * List v. Set v. Queue v. Map?
 * What is the difference between Collection and Collections?
 * What is the significance of the Iterable interface?
+---
+* What are the different uses of the `final` keyword? What happens if you place final on a class, method, and variable?
+* If you have a final reference variable, does this mean that the object the variable is referencing is now immutable?
+* What is the purpose of the SOLID principles?
+* What are generics and what is an example of their usefulness? (think of the collections API)
+* What is Maven?
+* What is the important configuration file that Maven projects have?
+* What can go inside of the configuration file?
+* What is the purpose of testing?
+* What is the difference between a unit, integration, and E2E test?
+* What is JUnit?
+* What are some method-level annotations exist with JUnit?
+* What annotation do we use to make a particular method a test case?
+* What is the AAA acronym when setting up a test case?
