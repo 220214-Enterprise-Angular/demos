@@ -18,9 +18,12 @@ CREATE TABLE sophiag.accounts (
 	
 	id SERIAL PRIMARY KEY,
 	balance NUMERIC(50, 2) DEFAULT 0, -- 123131231.09 IS ALLOWED
-	acc_owner INTEGER NOT NULL REFERENCES sophiag.users(id),
 	active BOOLEAN DEFAULT FALSE -- this determines whether the account has been approved
 );
+
+-- I dropped the acc_owner column to normalize this table
+--ALTER TABLE sophiag.accounts 
+--	DROP COLUMN acc_owner CASCADE;
 
 INSERT INTO sophiag.users (username, pwd, user_role_name)
 	VALUES ('Larry', 'secret', 'Employee'),
