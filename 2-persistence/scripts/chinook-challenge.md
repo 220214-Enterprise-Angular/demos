@@ -5,7 +5,7 @@
 * In DBeaver, Create a new connection
 * Click Postgres
 * Enter `enterprise220214.cvtq9j4axrge.us-east-1.rds.amazonaws.com` as *Host*
-* Password is `postgres`
+* Password is `postgres`, Username is `postgres`
 * Test Connection > if successful, click finish
 * Open a script in the **Chinook** Schema
 `
