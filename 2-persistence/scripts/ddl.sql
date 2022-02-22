@@ -18,7 +18,7 @@ CREATE TABLE IF NOT EXISTS users (
 	pwd VARCHAR(100) NOT NULL
 ); -- highlight AND press ctrl + enter TO run a snippet 
 
-DROP TABLE users;
+--DROP TABLE users;
 
 CREATE TABLE IF NOT EXISTS posts (
 	id SERIAL PRIMARY KEY,
