@@ -51,11 +51,3 @@ CREATE TABLE IF NOT EXISTS likes (
 	post_id INTEGER REFERENCES posts(id) NOT NULL, -- SET AS a FOREIGN KEY TO point TO id IN posts TABLE
 	PRIMARY KEY (user_id, post_id) -- composite KEY
 );
-
-
-
-
-
-
-
-
