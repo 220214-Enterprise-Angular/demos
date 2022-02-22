@@ -25,22 +25,22 @@
     - [link](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/datatypes/src/com/revature/main/Driver.java#L76-L90)
 - Introduction to Classes and Objects
     - Class members
-        - [properties/fields](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/classes-and-objects/src/com/revature/model/SportsCar.java#L10-L17)
-        - [behaviors/methods](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/classes-and-objects/src/com/revature/model/SportsCar.java#L39-L52)
-        - [constructors](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/classes-and-objects/src/com/revature/model/SportsCar.java#L19-L37)
-    - [SportsCar example](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/classes-and-objects/src/com/revature/main/Driver.java#L15-L19)
-    - [Calculator example](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/classes-and-objects/src/com/revature/main/Driver.java#L21-L27)
+        - [properties/fields](https://github.com/220214-Enterprise-Angular/demos/blob/main/1-core-java/classes-and-objects/src/com/revature/model/SportsCar.java#L10-L17)
+        - [behaviors/methods](https://github.com/220214-Enterprise-Angular/demos/blob/main/1-core-java/classes-and-objects/src/com/revature/model/SportsCar.java#L39-L52)
+        - [constructors](https://github.com/220214-Enterprise-Angular/demos/blob/main/1-core-java/classes-and-objects/src/com/revature/model/SportsCar.java#L19-L37)
+    - [SportsCar example](https://github.com/220214-Enterprise-Angular/demos/blob/main/1-core-java/classes-and-objects/src/com/revature/main/Driver.java#L15-L19)
+    - [Calculator example](https://github.com/220214-Enterprise-Angular/demos/blob/main/1-core-java/classes-and-objects/src/com/revature/main/Driver.java#L21-L27)
 - Operator Types
-    - [link](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/operators-and-control-flow/src/com/revature/main/Driver.java#L7-L13)
-    - [ternary operator](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/operators-and-control-flow/src/com/revature/main/Driver.java#L18)
+    - [link](https://github.com/220214-Enterprise-Angular/demos/blob/main/1-core-java/operators-and-control-flow/src/com/revature/main/Driver.java#L7-L13)
+    - [ternary operator](https://github.com/220214-Enterprise-Angular/demos/blob/main/1-core-java/operators-and-control-flow/src/com/revature/main/Driver.java#L18)
 - Control Flow
-    - [if](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/operators-and-control-flow/src/com/revature/main/Driver.java#L39-L41)
-    - [if-else](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/operators-and-control-flow/src/com/revature/main/Driver.java#L43-L49)
-    - [if-else if-else](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/operators-and-control-flow/src/com/revature/main/Driver.java#L51-L59)
-    - [Switch statement](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/operators-and-control-flow/src/com/revature/main/Driver.java#L61-L87)
-    - [For Loop](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/operators-and-control-flow/src/com/revature/main/Driver.java#L93-L98)
-    - [While loop](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/operators-and-control-flow/src/com/revature/main/Driver.java#L101-L107)
-    - [Do-while loop](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/operators-and-control-flow/src/com/revature/main/Driver.java#L110-L118)
+    - [if](https://github.com/220214-Enterprise-Angular/demos/blob/main/1-core-java/operators-and-control-flow/src/com/revature/main/Driver.java#L39-L41)
+    - [if-else](https://github.com/220214-Enterprise-Angular/demos/blob/main/1-core-java/operators-and-control-flow/src/com/revature/main/Driver.java#L43-L49)
+    - [if-else if-else](https://github.com/220214-Enterprise-Angular/demos/blob/main/1-core-java/operators-and-control-flow/src/com/revature/main/Driver.java#L51-L59)
+    - [Switch statement](https://github.com/220214-Enterprise-Angular/demos/blob/main/1-core-java/operators-and-control-flow/src/com/revature/main/Driver.java#L61-L87)
+    - [For Loop](https://github.com/220214-Enterprise-Angular/demos/blob/main/1-core-java/operators-and-control-flow/src/com/revature/main/Driver.java#L93-L98)
+    - [While loop](https://github.com/220214-Enterprise-Angular/demos/blob/main/1-core-java/operators-and-control-flow/src/com/revature/main/Driver.java#L101-L107)
+    - [Do-while loop](https://github.com/220214-Enterprise-Angular/demos/blob/main/1-core-java/operators-and-control-flow/src/com/revature/main/Driver.java#L110-L118)
 
 # Day 2
 - Git introduction
@@ -51,63 +51,63 @@
     - [stack v. heap](./week-1-images/memory-management.JPG)
     - [String pool](./week-1-images/string-pool.JPG)
 - String Demo
-    - [link](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/string-demo/src/com/revature/main/Driver.java)
-    - [s referencing a String in String pool](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/string-demo/src/com/revature/main/Driver.java#L11-L14)
-    - [String instantiated in the regular part of the heap](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/string-demo/src/com/revature/main/Driver.java#L19-L20)
-    - [.concat(), .length(), .startsWith(), .endsWith()](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/string-demo/src/com/revature/main/Driver.java#L28-L39)
-    - [Ways to iterate through the characters of a String](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/string-demo/src/com/revature/main/Driver.java#L41-L67)
+    - [link](https://github.com/220214-Enterprise-Angular/demos/blob/main/1-core-java/string-demo/src/com/revature/main/Driver.java)
+    - [s referencing a String in String pool](https://github.com/220214-Enterprise-Angular/demos/blob/main/1-core-java/string-demo/src/com/revature/main/Driver.java#L11-L14)
+    - [String instantiated in the regular part of the heap](https://github.com/220214-Enterprise-Angular/demos/blob/main/1-core-java/string-demo/src/com/revature/main/Driver.java#L19-L20)
+    - [.concat(), .length(), .startsWith(), .endsWith()](https://github.com/220214-Enterprise-Angular/demos/blob/main/1-core-java/string-demo/src/com/revature/main/Driver.java#L28-L39)
+    - [Ways to iterate through the characters of a String](https://github.com/220214-Enterprise-Angular/demos/blob/main/1-core-java/string-demo/src/com/revature/main/Driver.java#L41-L67)
 - StringBuilder and StringBuffer
     - [image](./week-1-images/stringbuilder-stringbuffer.JPG)
-    - [reversing String with StringBuilder](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/reverse-a-string/src/com/revature/main/Driver.java#L56-L66)
-    - [reversing String with String concatenation (INEFFICIENT)](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/reverse-a-string/src/com/revature/main/Driver.java#L37-L49)
+    - [reversing String with StringBuilder](https://github.com/220214-Enterprise-Angular/demos/blob/main/1-core-java/reverse-a-string/src/com/revature/main/Driver.java#L56-L66)
+    - [reversing String with String concatenation (INEFFICIENT)](https://github.com/220214-Enterprise-Angular/demos/blob/main/1-core-java/reverse-a-string/src/com/revature/main/Driver.java#L37-L49)
 - Wrapper Classes
-    - [link](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/wrapper-class-demo/src/com/revature/main/Driver.java#L25-L90)
+    - [link](https://github.com/220214-Enterprise-Angular/demos/blob/main/1-core-java/wrapper-class-demo/src/com/revature/main/Driver.java#L25-L90)
 - Variable Scopes
     - [image](./week-1-images/variable-scopes.JPG)
-    - [global/static scope](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/variable-scopes/src/com/revature/main/Person.java#L7-L8)
-    - [instance scope](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/variable-scopes/src/com/revature/main/Person.java#L10-L15)
-    - [method scope](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/variable-scopes/src/com/revature/main/Person.java#L30-L31)
-    - [block scope (2 examples)](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/variable-scopes/src/com/revature/main/Person.java#L35-L41)
+    - [global/static scope](https://github.com/220214-Enterprise-Angular/demos/blob/main/1-core-java/variable-scopes/src/com/revature/main/Person.java#L7-L8)
+    - [instance scope](https://github.com/220214-Enterprise-Angular/demos/blob/main/1-core-java/variable-scopes/src/com/revature/main/Person.java#L10-L15)
+    - [method scope](https://github.com/220214-Enterprise-Angular/demos/blob/main/1-core-java/variable-scopes/src/com/revature/main/Person.java#L30-L31)
+    - [block scope (2 examples)](https://github.com/220214-Enterprise-Angular/demos/blob/main/1-core-java/variable-scopes/src/com/revature/main/Person.java#L35-L41)
 - Access Modifiers
     - [image](./week-1-images/access-modifiers.JPG)
-    - [demo](https://github.com/220214-Enterprise-Angular/demos/tree/main/week-1/access-modifier-demo)
+    - [demo](https://github.com/220214-Enterprise-Angular/demos/tree/main/1-core-java/access-modifier-demo)
 - Scanner Class
     - Often used for console input from the user
-    - [demo](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/scanner-demo/src/com/revature/main/Driver.java#L11-L25)
+    - [demo](https://github.com/220214-Enterprise-Angular/demos/blob/main/1-core-java/scanner-demo/src/com/revature/main/Driver.java#L11-L25)
 - Arrays
     - [image](./week-1-images/arrays.JPG)
-    - [instantiating an array w/ no predefined values](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/array-demo/src/com/revature/main/Driver.java#L15-L19)
-    - [assigning values 1 by 1 and iterating over the array](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/array-demo/src/com/revature/main/Driver.java#L29-L37)
-    - [using for-each loop w/ array](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/array-demo/src/com/revature/main/Driver.java#L39-L42)
-    - [instantiate an array w/ PREDEFINED values](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/array-demo/src/com/revature/main/Driver.java#L45)
-    - [multi-dimensional array](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/array-demo/src/com/revature/main/Driver.java#L54-L80)
+    - [instantiating an array w/ no predefined values](https://github.com/220214-Enterprise-Angular/demos/blob/main/1-core-java/array-demo/src/com/revature/main/Driver.java#L15-L19)
+    - [assigning values 1 by 1 and iterating over the array](https://github.com/220214-Enterprise-Angular/demos/blob/main/1-core-java/array-demo/src/com/revature/main/Driver.java#L29-L37)
+    - [using for-each loop w/ array](https://github.com/220214-Enterprise-Angular/demos/blob/main/1-core-java/array-demo/src/com/revature/main/Driver.java#L39-L42)
+    - [instantiate an array w/ PREDEFINED values](https://github.com/220214-Enterprise-Angular/demos/blob/main/1-core-java/array-demo/src/com/revature/main/Driver.java#L45)
+    - [multi-dimensional array](https://github.com/220214-Enterprise-Angular/demos/blob/main/1-core-java/array-demo/src/com/revature/main/Driver.java#L54-L80)
 - Var-args
-    - [demo](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/array-demo/src/com/revature/main/Driver.java#L87-L101)
-    - [using var-args](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/array-demo/src/com/revature/main/Driver.java#L83-L84)
+    - [demo](https://github.com/220214-Enterprise-Angular/demos/blob/main/1-core-java/array-demo/src/com/revature/main/Driver.java#L87-L101)
+    - [using var-args](https://github.com/220214-Enterprise-Angular/demos/blob/main/1-core-java/array-demo/src/com/revature/main/Driver.java#L83-L84)
 - Encapsulation
     - [image](./week-1-images/encapsulation.JPG)
-    - [private fields](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/encapsulation-demo/src/com/revature/model/Person.java#L11-L13)
-    - [getters and setters](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/encapsulation-demo/src/com/revature/model/Person.java#L24-L53)
+    - [private fields](https://github.com/220214-Enterprise-Angular/demos/blob/main/1-core-java/encapsulation-demo/src/com/revature/model/Person.java#L11-L13)
+    - [getters and setters](https://github.com/220214-Enterprise-Angular/demos/blob/main/1-core-java/encapsulation-demo/src/com/revature/model/Person.java#L24-L53)
 
 # Day 3
-- [Analysis of reversing string algorithms](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/reverse-string-implementations/src/com/revature/Driver.java#L283-L325)
+- [Analysis of reversing string algorithms](https://github.com/220214-Enterprise-Angular/demos/blob/main/1-core-java/reverse-string-implementations/src/com/revature/Driver.java#L283-L325)
 - Inheritance
     - [image](./week-1-images/inheritance.JPG)
-    - [superclass / parent class](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/inheritance-demo/src/com/revature/model/Animal.java#L3-L38)
-    - [subclass / child class](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/inheritance-demo/src/com/revature/model/Dog.java#L5-L36)
+    - [superclass / parent class](https://github.com/220214-Enterprise-Angular/demos/blob/main/1-core-java/inheritance-demo/src/com/revature/model/Animal.java#L3-L38)
+    - [subclass / child class](https://github.com/220214-Enterprise-Angular/demos/blob/main/1-core-java/inheritance-demo/src/com/revature/model/Dog.java#L5-L36)
 - Polymorphism
     - [image](./week-1-images/polymorphism.JPG)
-    - [runtime polymorphism](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/polymorphism-demo/src/com/revature/main/Driver.java#L17-L39)
-    - [compile time polymorphism](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/polymorphism-demo/src/com/revature/main/Driver.java#L41-L52)
-    - [method overriding](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/polymorphism-demo/src/com/revature/model/Dog.java#L5-L21)
-    - [method overloading](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/polymorphism-demo/src/com/revature/model/Calculator.java#L8-L43)
+    - [runtime polymorphism](https://github.com/220214-Enterprise-Angular/demos/blob/main/1-core-java/polymorphism-demo/src/com/revature/main/Driver.java#L17-L39)
+    - [compile time polymorphism](https://github.com/220214-Enterprise-Angular/demos/blob/main/1-core-java/polymorphism-demo/src/com/revature/main/Driver.java#L41-L52)
+    - [method overriding](https://github.com/220214-Enterprise-Angular/demos/blob/main/1-core-java/polymorphism-demo/src/com/revature/model/Dog.java#L5-L21)
+    - [method overloading](https://github.com/220214-Enterprise-Angular/demos/blob/main/1-core-java/polymorphism-demo/src/com/revature/model/Calculator.java#L8-L43)
 - Object class
     - [image (overview)](./week-1-images/object-class.JPG)
     - [image (hashCode and equals)](./week-1-images/hashcode-and-equals.JPG)
     - [image (conceptual hashmap)](./week-1-images/hashcode-and-hashmap.JPG)
-    - [overriding toString(), equals(), and hashCode()](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/object-class-demo/src/com/revature/model/Person.java#L26-L53)
-    - [toString()](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/object-class-demo/src/com/revature/main/Driver.java#L13-L16)
-    - [== v. .equals()](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/object-class-demo/src/com/revature/main/Driver.java#L20-L24)
+    - [overriding toString(), equals(), and hashCode()](https://github.com/220214-Enterprise-Angular/demos/blob/main/1-core-java/object-class-demo/src/com/revature/model/Person.java#L26-L53)
+    - [toString()](https://github.com/220214-Enterprise-Angular/demos/blob/main/1-core-java/object-class-demo/src/com/revature/main/Driver.java#L13-L16)
+    - [== v. .equals()](https://github.com/220214-Enterprise-Angular/demos/blob/main/1-core-java/object-class-demo/src/com/revature/main/Driver.java#L20-L24)
 - Throwable Hierarchy
     - [image](./week-1-images/throwable-hierarchy.JPG)
 - Reading a stack trace
@@ -117,20 +117,20 @@
 - throw v. throws v. Throwable
     - [image](./week-1-images/throw-throws-throwable.JPG)
 - Exception demo
-    - [declaring an exception using throws keyword](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/exception-demo/src/com/revature/main/Driver.java#L37)
-    - [propagating an exception using throw keyword](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/exception-demo/src/com/revature/main/Driver.java#L40)
-    - [handling exception using catch block](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/exception-demo/src/com/revature/main/Driver.java#L27-L28)
+    - [declaring an exception using throws keyword](https://github.com/220214-Enterprise-Angular/demos/blob/main/1-core-java/exception-demo/src/com/revature/main/Driver.java#L37)
+    - [propagating an exception using throw keyword](https://github.com/220214-Enterprise-Angular/demos/blob/main/1-core-java/exception-demo/src/com/revature/main/Driver.java#L40)
+    - [handling exception using catch block](https://github.com/220214-Enterprise-Angular/demos/blob/main/1-core-java/exception-demo/src/com/revature/main/Driver.java#L27-L28)
 - Cracking the Coding Interview Problem 1.1
-    - [problem statement](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/ctci-1-1/src/com/revature/Driver.java#L9-L10)
-    - [bruteforce O(n^2)](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/ctci-1-1/src/com/revature/Driver.java#L61-L70)
-    - [using sorting without additional data structure to achieve O(n log n)](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/ctci-1-1/src/com/revature/Driver.java#L38-L59)
-    - [using a data structure to achieve O(n)](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/ctci-1-1/src/com/revature/Driver.java#L22-L35)
+    - [problem statement](https://github.com/220214-Enterprise-Angular/demos/blob/main/1-core-java/ctci-1-1/src/com/revature/Driver.java#L9-L10)
+    - [bruteforce O(n^2)](https://github.com/220214-Enterprise-Angular/demos/blob/main/1-core-java/ctci-1-1/src/com/revature/Driver.java#L61-L70)
+    - [using sorting without additional data structure to achieve O(n log n)](https://github.com/220214-Enterprise-Angular/demos/blob/main/1-core-java/ctci-1-1/src/com/revature/Driver.java#L38-L59)
+    - [using a data structure to achieve O(n)](https://github.com/220214-Enterprise-Angular/demos/blob/main/1-core-java/ctci-1-1/src/com/revature/Driver.java#L22-L35)
 - Asymptotic Notation
     - [image](./week-1-images/asymptotic-notation.JPG)
 - List
     - [image](./week-1-images/list.JPG)
 - Implement a custom ArrayList
-    - [demo](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/arraylist-implementation/src/com/revature/main/MyIntegerArrayList.java)
+    - [demo](https://github.com/220214-Enterprise-Angular/demos/blob/main/1-core-java/arraylist-implementation/src/com/revature/main/MyIntegerArrayList.java)
 
 # Day 4
 - Amortized analysis of adding elements to ArrayList
@@ -139,42 +139,42 @@
     - [image](./week-1-images/git-branching.JPG)
 - Linear search
     - [image](./week-1-images/linear-search.JPG)
-    - [demo](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/search-algorithms-demo/src/com/revature/main/Driver.java#L36-L46)
+    - [demo](https://github.com/220214-Enterprise-Angular/demos/blob/main/1-core-java/search-algorithms-demo/src/com/revature/main/Driver.java#L36-L46)
 - Binary search
     - [image](./week-1-images/binary-search.JPG)
-    - [demo](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/search-algorithms-demo/src/com/revature/main/Driver.java#L48-L66)
+    - [demo](https://github.com/220214-Enterprise-Angular/demos/blob/main/1-core-java/search-algorithms-demo/src/com/revature/main/Driver.java#L48-L66)
 - Recursion
     - [image](./week-1-images/recursion.JPG)
-    - [SLOW demo](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/recursion-demo/src/com/revature/main/Driver.java#L28-L35)
-    - [FAST demo (with memoization)](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/recursion-demo/src/com/revature/main/Driver.java#L37-L49)
+    - [SLOW demo](https://github.com/220214-Enterprise-Angular/demos/blob/main/1-core-java/recursion-demo/src/com/revature/main/Driver.java#L28-L35)
+    - [FAST demo (with memoization)](https://github.com/220214-Enterprise-Angular/demos/blob/main/1-core-java/recursion-demo/src/com/revature/main/Driver.java#L37-L49)
 - Implementing a stack (with array)
-    - [stack implementation class](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/stack-implementation/src/com/revature/main/MyIntegerStackImplementation.java)
-    - [creating stack objects and using them](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/stack-implementation/src/com/revature/main/Driver.java#L6-L33)
+    - [stack implementation class](https://github.com/220214-Enterprise-Angular/demos/blob/main/1-core-java/stack-implementation/src/com/revature/main/MyIntegerStackImplementation.java)
+    - [creating stack objects and using them](https://github.com/220214-Enterprise-Angular/demos/blob/main/1-core-java/stack-implementation/src/com/revature/main/Driver.java#L6-L33)
 - Abstraction
     - [image](./week-1-images/abstraction.JPG)
 - ArrayList v. LinkedList
     - [image](./week-1-images/arraylist-v-linkedlist.JPG)
 - Interfaces
-    - [notes](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/list-abstraction/src/com/revature/main/MyIntegerList.java#L8-L14)
-    - [MyIntegerList interface](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/list-abstraction/src/com/revature/main/MyIntegerList.java)
-    - [Inheritance of interface v. class](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/list-abstraction/src/com/revature/main/MyIntegerArrayList.java#L3-L7)
-    - [MyIntegerArrayList implements MyIntegerList](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/list-abstraction/src/com/revature/main/MyIntegerArrayList.java)
-    - [MyIntegerLinkedList implements MyIntegerList](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/list-abstraction/src/com/revature/main/MyIntegerLinkedList.java)
+    - [notes](https://github.com/220214-Enterprise-Angular/demos/blob/main/1-core-java/list-abstraction/src/com/revature/main/MyIntegerList.java#L8-L14)
+    - [MyIntegerList interface](https://github.com/220214-Enterprise-Angular/demos/blob/main/1-core-java/list-abstraction/src/com/revature/main/MyIntegerList.java)
+    - [Inheritance of interface v. class](https://github.com/220214-Enterprise-Angular/demos/blob/main/1-core-java/list-abstraction/src/com/revature/main/MyIntegerArrayList.java#L3-L7)
+    - [MyIntegerArrayList implements MyIntegerList](https://github.com/220214-Enterprise-Angular/demos/blob/main/1-core-java/list-abstraction/src/com/revature/main/MyIntegerArrayList.java)
+    - [MyIntegerLinkedList implements MyIntegerList](https://github.com/220214-Enterprise-Angular/demos/blob/main/1-core-java/list-abstraction/src/com/revature/main/MyIntegerLinkedList.java)
     - [diagram of inheritance](./week-1-images/custom-list-inheritance-diagram.JPG)
 - Abstract Class
-    - [notes](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/abstract-class-demo/src/com/revature/model/Shape.java#L5-L11)
-    - [calculateArea() abstract method](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/abstract-class-demo/src/com/revature/model/Shape.java#L20-L22)
-    - [Square extends Shape](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/abstract-class-demo/src/com/revature/model/Square.java)
-    - [Triangle extends Shape](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/abstract-class-demo/src/com/revature/model/Triangle.java)
-    - [Circle extends Shape](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/abstract-class-demo/src/com/revature/model/Circle.java)
-    - [abstraction + polymorphism in action](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/abstract-class-demo/src/com/revature/main/Driver.java#L12-L22)
+    - [notes](https://github.com/220214-Enterprise-Angular/demos/blob/main/1-core-java/abstract-class-demo/src/com/revature/model/Shape.java#L5-L11)
+    - [calculateArea() abstract method](https://github.com/220214-Enterprise-Angular/demos/blob/main/1-core-java/abstract-class-demo/src/com/revature/model/Shape.java#L20-L22)
+    - [Square extends Shape](https://github.com/220214-Enterprise-Angular/demos/blob/main/1-core-java/abstract-class-demo/src/com/revature/model/Square.java)
+    - [Triangle extends Shape](https://github.com/220214-Enterprise-Angular/demos/blob/main/1-core-java/abstract-class-demo/src/com/revature/model/Triangle.java)
+    - [Circle extends Shape](https://github.com/220214-Enterprise-Angular/demos/blob/main/1-core-java/abstract-class-demo/src/com/revature/model/Circle.java)
+    - [abstraction + polymorphism in action](https://github.com/220214-Enterprise-Angular/demos/blob/main/1-core-java/abstract-class-demo/src/com/revature/main/Driver.java#L12-L22)
 - Collections API
     - [hierarchy image](./week-1-images/collections-api-hierarchy.JPG)
     - [common interview questions image](./week-1-images/collections-api-questions.JPG)
-    - [list demos](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/collections-api-demo/src/com/revature/main/Driver.java#L16-L57)
-    - [set demo](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/collections-api-demo/src/com/revature/main/Driver.java#L59-L74)
-    - [queue demo](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/collections-api-demo/src/com/revature/main/Driver.java#L76-L89)
-    - [Collections class demo](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/collections-api-demo/src/com/revature/main/Driver.java#L91-L113)
+    - [list demos](https://github.com/220214-Enterprise-Angular/demos/blob/main/1-core-java/collections-api-demo/src/com/revature/main/Driver.java#L16-L57)
+    - [set demo](https://github.com/220214-Enterprise-Angular/demos/blob/main/1-core-java/collections-api-demo/src/com/revature/main/Driver.java#L59-L74)
+    - [queue demo](https://github.com/220214-Enterprise-Angular/demos/blob/main/1-core-java/collections-api-demo/src/com/revature/main/Driver.java#L76-L89)
+    - [Collections class demo](https://github.com/220214-Enterprise-Angular/demos/blob/main/1-core-java/collections-api-demo/src/com/revature/main/Driver.java#L91-L113)
 
 # Day 5
 * Final Keyword
@@ -182,16 +182,16 @@
 * Solid Principles
     - [image](./week-1-images/solid-principles.JPG)
 * Generics Demo
-    - [using a generic with custom ArrayList implementation](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/generics-demo/src/com/revature/main/Driver.java#L7)
-    - [MyArrayList implementation](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/generics-demo/src/com/revature/main/MyArrayList.java)
+    - [using a generic with custom ArrayList implementation](https://github.com/220214-Enterprise-Angular/demos/blob/main/1-core-java/generics-demo/src/com/revature/main/Driver.java#L7)
+    - [MyArrayList implementation](https://github.com/220214-Enterprise-Angular/demos/blob/main/1-core-java/generics-demo/src/com/revature/main/MyArrayList.java)
 * Maven Introduction
     - [image](./week-1-images/maven-intro.JPG)
 * Testing Introduction
     - [image](./week-1-images/testing-intro.JPG)
 * Testing Demo
-    - [pom.xml configuration with JUnit 5 (Jupiter) external dependency](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/testing-demo/pom.xml#L7-L20)
-    - [MathUtility isPrime(...) method](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/testing-demo/src/main/java/com/revature/utility/NumberUtility.java)
-    - [Writing unit tests](https://github.com/220214-Enterprise-Angular/demos/blob/main/week-1/testing-demo/src/test/java/com/revature/utility/NumberUtilityTest.java)
+    - [pom.xml configuration with JUnit 5 (Jupiter) external dependency](https://github.com/220214-Enterprise-Angular/demos/blob/main/1-core-java/testing-demo/pom.xml#L7-L20)
+    - [MathUtility isPrime(...) method](https://github.com/220214-Enterprise-Angular/demos/blob/main/1-core-java/testing-demo/src/main/java/com/revature/utility/NumberUtility.java)
+    - [Writing unit tests](https://github.com/220214-Enterprise-Angular/demos/blob/main/1-core-java/testing-demo/src/test/java/com/revature/utility/NumberUtilityTest.java)
 
 # Questions
 * What exactly makes Java "platform independent"?
