@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 import org.apache.log4j.Logger;
 
+import com.revature.exceptions.RegisterUserFailedException;
 import com.revature.models.Role;
 import com.revature.models.User;
 import com.revature.services.UserService;
@@ -96,7 +97,14 @@ public class App {
 			newUser.setUsername(newUsername);
 			newUser.setRole(Role.Customer);
 			
-			uservice.register(newUser);
+			try {
+				uservice.register(newUser);
+			} catch (RegisterUserFailedException e) {
+				logger.warn(e.getMessage());
+				// perform some more logic.....
+			}
+			
+			
 		}
 		
 		

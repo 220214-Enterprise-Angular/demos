@@ -4,13 +4,14 @@ import org.apache.log4j.Logger;
 
 import com.revature.dao.IUserDao;
 import com.revature.dao.UserDaoImpl;
+import com.revature.exceptions.RegisterUserFailedException;
 import com.revature.models.User;
 
 public class UserService {
 	
 	private static Logger logger = Logger.getLogger(UserService.class);
 	// UserService DEPENDS on the UserDaoImpl...so therefore we will inject a dependency into this class
-	private IUserDao udao = new UserDaoImpl();
+	public IUserDao udao = new UserDaoImpl();
 	
 	public User register(User u) {
 		
@@ -29,9 +30,12 @@ public class UserService {
 			return u; // return the user after its ID has been assigned.
 			
 		} else {
-			logger.info("User with username " + username + " already exists");
-			// return the User object found instead of re-inserting it
-			return possibleUser;
+			
+			throw new RegisterUserFailedException("Failed to register user because id was not 0");
+
+			// logger.info("User with username " + username + " already exists");
+//			// return the User object found instead of re-inserting it
+//			return possibleUser;
 		}
 	}
 	
