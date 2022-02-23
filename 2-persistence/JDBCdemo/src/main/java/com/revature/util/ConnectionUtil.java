@@ -46,12 +46,15 @@ public class ConnectionUtil {
 	public static Connection getConnection() { 
 		
 		try {
-			// first we check is an instance exists
+			// first we check is an instance exists (if it's NOT null, and ISN'T closed, we return the single instance
 			if (conn !=null && !conn.isClosed()) {
 				// if an instance exists, we return the static connection declared on line 17
 				logger.info("returned the re-used connection object");
 				return conn;
 			}
+			
+			//...If it IS null and IS closed, we continue fown to line 65 and establish a connection to return
+			
 		} catch (SQLException e) {
 			logger.error("we failed to re-use the connection");
 			e.printStackTrace();
@@ -74,7 +77,7 @@ public class ConnectionUtil {
 			password = prop.getProperty("password");
 			
 			conn = DriverManager.getConnection(url, username, password); 
-			// IF the above line is successful we WON'T hit any of these catch clauses and the code will execute line 93 (return conn)
+			// IF the above line is successful we WON'T hit any of these catch clauses and the code will execute line 94 (return conn)
 			logger.info("Successfully connected to DB"); // If we've hit this line, we've successfully established a connection with the DB
 			
 		} catch (SQLException e) {
@@ -87,7 +90,7 @@ public class ConnectionUtil {
 			logger.warn("Something wrong with application.properties file");
 			e.printStackTrace();
 		}
-		
+		// Return the established connection if no exceptions are thrown
 		return conn;
 	}
 }
