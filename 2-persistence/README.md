@@ -3,4 +3,4 @@
 
 ### Extra SQL Exercises
 - [Hackerrank SQL Domain](https://www.hackerrank.com/domains/sql)
-- [Chinook SQL Lab](https://github.com/211129-Enterprise/demos/blob/main/2-persistence/scripts/chinook-challenge.md)
+- [Chinook SQL Lab](https://github.com/220214-Enterprise-Angular/demos/blob/main/2-persistence/scripts/chinook-challenge.md)
