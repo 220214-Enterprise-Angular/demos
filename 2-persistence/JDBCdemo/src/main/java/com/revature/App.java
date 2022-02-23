@@ -86,7 +86,7 @@ public class App {
 			
 			User newUser = new User();
 			
-			System.out.println("Enter a username toi register with");
+			System.out.println("Enter a username to register with");
 			String newUsername = scan.next();
 			
 			System.out.println("Enter a password for your account");

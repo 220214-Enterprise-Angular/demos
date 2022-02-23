@@ -1,6 +1,7 @@
 package com.revature;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNull;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
@@ -82,7 +83,7 @@ public class UserServiceTests {
 		userv.register(dummyUser); 
 	}
 	
-	@Test
+	@Test // we're testing the register method
 	public void testRegisterUser_returnNewPkAsId() {
 		
 		// build a valid user to register
@@ -93,41 +94,44 @@ public class UserServiceTests {
 		// randomly generate a number which we'll pretend that the DB geenrated
 		Random r = new Random();
 		int fakePk = r.nextInt(100); // sets the random number ot be anywhere between 1 - 100;
+	
 		
-		System.out.println(fakePk);
-		
+		// firs the dao is called upon to check if the user's already in the DB
 		when(mockDao.findByUsername(dummyUser.getUsername())).thenReturn(new User());
 		
 		// we need to say that WHEN we insert the dummyUserm then return the randomly generated number as PK
 		when(mockDao.insert(dummyUser)).thenReturn(fakePk);
 		
-		// register the user
+		// register the user (the returned value of the method)
 		User registeredUser = userv.register(dummyUser);
-		
-		System.out.println(registeredUser.getId());
+	
 		
 		// then check that the registered user's id is equal to the fakePK
 		// we want to assert equality of the User's id that register() method returns.
 		assertEquals(fakePk, registeredUser.getId());
+		
+				     // expected, actual 
 	}
+
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+	@Test
+	public void testIncorrectUsernamePassword_returnsNull() {
+		
+		// provide the dummy data for the dao to return
+		
+		// build dummUser with a different password (but username) than the password passed to the login method
+		dummyUser.setUsername("x");
+		dummyUser.setPwd("z");
+		
+		
+		when(mockDao.findByUsername("x")).thenReturn(dummyUser);
+		
+		// the login method will approve 
+		
+		
+		assertNull(userv.login("x", "y"));
+		
+	}
 	
 
 }

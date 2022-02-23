@@ -20,7 +20,7 @@ public class User implements Serializable { // Serialization is the process of b
 	private String pwd;
 	private Role role; // this will correlate to the ENUM type in our RDBMS.
 
-	private List<Account> accounts;
+	private List<Account> accounts; 
 	
 	// no-args constructor
 	public User() {

@@ -25,7 +25,8 @@ public class UserService {
 		if (possibleUser.getId() == 0) { // this means that the user doesn't exist in the DB and we can register it
 			
 			logger.info("successfully registered user with username " + username);
-			int id = udao.insert(u);
+			int id = udao.insert(u); // are you maintaining the integrity of the data returned?
+			
 			u.setId(id);
 			return u; // return the user after its ID has been assigned.
 			

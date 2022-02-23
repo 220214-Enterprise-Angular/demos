@@ -7,5 +7,4 @@ public class RegisterUserFailedException extends RuntimeException{
 		super(message);
 		// This is a constructor I've inherited from the RuntimeException class
 	}
-
 }
