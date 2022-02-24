@@ -202,16 +202,6 @@ public class UserDaoImpl implements IUserDao { // save with ctrl + shift + s
 		return allUsers;
 	}
 	
-	public static void main(String[] args) {
-		UserDaoImpl udao = new UserDaoImpl();
-		
-		List<User> userList = udao.findAll();
-		
-		for (User user : userList) {
-			System.out.println(user);
-		}
-		
-	}
 
 	@Override
 	public boolean update(User u) {
