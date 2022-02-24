@@ -57,7 +57,7 @@ AS $$
 $$ 
 LANGUAGE plpgsql;
 
-CREATE TRIGGER trig 
+CREATE TRIGGER sophiag.trig 
 	AFTER INSERT ON sophiag.accounts 
 	FOR EACH ROW
 	EXECUTE FUNCTION sophiag.auto_insert_into_jt();
@@ -66,13 +66,6 @@ CREATE TRIGGER trig
 SELECT * FROM sophiag.users;
 SELECT * FROM sophiag.accounts;
 SELECT * FROM sophiag.users_accounts_jt;
-		
-INSERT INTO sophiag.accounts (balance, acc_owner, active) 
-	VALUES (2000, 1, TRUE);
-
-INSERT INTO sophiag.accounts (balance, acc_owner, active) 
-	VALUES (20, 2, FALSE),
-			(1000000, 4, TRUE);
 		
 		
 -- THIS IS GOING TO BE A join statement so we can return all user data and the user's associated accounts
@@ -90,17 +83,17 @@ SELECT * FROM user_account_data;
 		
 		
 
--- this is only returning the accounts for one person
-SELECT sophiag.accounts.id, sophiag.accounts.balance 
-FROM sophiag.accounts
-	INNER JOIN sophiag.users_accounts_jt 
-		ON sophiag.accounts.id = sophiag.users_accounts_jt.acc_owner 
-			WHERE sophiag.users_accounts_jt.acc_owner = 2;
+-- this is only returning the accounts for one person based on their user id
+	
+		SELECT accounts.id, accounts.balance, accounts.active 
+			FROM accounts
+				INNER JOIN users_accounts_jt 
+					ON accounts.id = users_accounts_jt.account  
+						WHERE users_accounts_jt.acc_owner = 2;
 		
 		
-		
-		
-		
+INSERT INTO accounts (balance, acc_owner, active) 
+	VALUES (9000, 2, TRUE);
 		
 		
 
