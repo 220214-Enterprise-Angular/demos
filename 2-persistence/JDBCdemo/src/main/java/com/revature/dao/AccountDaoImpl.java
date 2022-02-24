@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.LinkedList;
 import java.util.List;
 
 import org.apache.log4j.Logger;
@@ -61,16 +62,62 @@ public class AccountDaoImpl implements IAccountDao{
 
 	
 	/**
-				 * SELECT sophiag.accounts.id, sophiag.accounts.balance, sophiag.accounts.active 
-			FROM sophiag.accounts
-				INNER JOIN sophiag.users_accounts_jt 
-					ON sophiag.accounts.id = sophiag.users_accounts_jt.acc_owner 
-						WHERE sophiag.users_accounts_jt.acc_owner = 2;
+		SELECT accounts.id, accounts.balance, accounts.active 
+			FROM accounts
+				INNER JOIN users_accounts_jt 
+					ON accounts.id = users_accounts_jt.acc_owner 
+						WHERE users_accounts_jt.acc_owner = ?
 	 */
 	@Override
 	public List<Account> findByOwner(int accOwnerId) { // find all the accounts based on an owner ID
-		// TODO Auto-generated method stub
-		return null;
+		
+		// setup a list to add the accounts to that we collect.  return this list at the end
+		List<Account> ownedAccounts = new LinkedList<Account>();
+		
+		try (Connection conn = ConnectionUtil.getConnection()) {
+			
+			String sql = "SELECT accounts.id, accounts.balance, accounts.active \r\n" + 
+					"			FROM accounts\r\n" + 
+					"				INNER JOIN users_accounts_jt \r\n" + 
+					"					ON accounts.id = users_accounts_jt.account  \r\n" + 
+					"						WHERE users_accounts_jt.acc_owner = ?";
+			
+			PreparedStatement stmt = conn.prepareStatement(sql);
+			
+			stmt.setInt(1, accOwnerId);
+			
+			// Grab a ResultSet obj
+			ResultSet rs = stmt.executeQuery();
+			
+			// there could be 5 records, or there could be 0 records
+			while (rs.next()) {
+				
+				int id = rs.getInt("id");
+				double balance = rs.getDouble("balance");
+				boolean isActive = rs.getBoolean("active");
+				
+				// instantitate the account object
+				Account a = new Account(id, balance, accOwnerId, isActive);
+				
+				// add the account to the list
+				ownedAccounts.add(a);
+			}
+			
+			
+		} catch (SQLException e) {
+			logger.warn("Unable to fetch accounts from DB with the owner id of " + accOwnerId);
+			e.printStackTrace();
+		}
+		
+		return ownedAccounts;
+	}
+	
+	public static void main(String[] args) {
+		AccountDaoImpl adao = new AccountDaoImpl();
+		
+		int pk = adao.insert(new Account(610, 2, true));
+		
+		System.out.println(pk);
 	}
 
 	@Override
