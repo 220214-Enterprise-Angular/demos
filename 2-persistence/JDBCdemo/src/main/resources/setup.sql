@@ -79,11 +79,13 @@ INSERT INTO sophiag.accounts (balance, acc_owner, active)
 		
 		
 -- user id, username, pwd, role, account id, account balance, isActive
+CREATE VIEW user_account_data AS
 SELECT users.id, users.username, users.pwd, users.user_role_name, accounts.id AS account_id, accounts.balance, accounts.active
 	FROM users
 	LEFT JOIN users_accounts_jt ON users.id = users_accounts_jt.acc_owner 
 	LEFT JOIN accounts ON accounts.id  = users_accounts_jt.account;
-		
+	
+SELECT * FROM user_account_data;
 		
 		
 		

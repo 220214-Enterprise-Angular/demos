@@ -4,11 +4,14 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.sql.Types;
+import java.util.LinkedList;
 import java.util.List;
 
 import org.apache.log4j.Logger;
 
+import com.revature.models.Account;
 import com.revature.models.Role;
 import com.revature.models.User;
 import com.revature.util.ConnectionUtil;
@@ -136,10 +139,78 @@ public class UserDaoImpl implements IUserDao { // save with ctrl + shift + s
 		return u; // this successfully returns the initlaized User object with the data returned
 	}
 
-	@Override
+	/**
+	 * We will make a SQL query to the DB to return the data from the view
+	 */
+	@Override 
 	public List<User> findAll() {
-		// TODO Auto-generated method stub
-		return null;
+
+		// make an empty list to store the User objects returned
+		List<User> allUsers = new LinkedList<User>();
+		
+		// try/ catch with the connection
+		try (Connection conn = ConnectionUtil.getConnection()) {
+			
+			// create a statement (no prepared statement is needed because we're mkaing a basic query
+			Statement stmt = conn.createStatement();
+			
+			String sql = "SELECT * FROM user_account_data;"; // when we execute this, it will generate the appropriate records to iterate over
+			
+			// Grab a result set object to iterate over this data
+			ResultSet rs =  stmt.executeQuery(sql); // this returns rows of data
+			
+			// while there is data to iterate over within the result set, we want to capture the data in each column
+			while (rs.next()) {
+				
+				// grab id, username, password, role
+				int userId = rs.getInt("id");
+				String username = rs.getString("username");
+				String password = rs.getString("pwd");
+				Role role = Role.valueOf(rs.getString("user_role_name"));
+				
+				// we now have enough data to construct a User object, onto the Account object!
+				
+				int accId = rs.getInt("account_id");
+				double balance = rs.getDouble("balance");
+				boolean isActive = rs.getBoolean("active");
+				
+				// if the account is 0 it means the user doesn't have an account
+				if (accId == 0) {
+					// instantiate a User, and add it to the list
+					User u = new User(userId, username, password, role, new LinkedList<Account>());
+					allUsers.add(u);		
+				} else {
+					Account a = new Account(accId, balance, userId, isActive);
+					List<Account> accounts = new LinkedList<Account>();
+					
+					// add the instantiated account to the list
+					accounts.add(a);
+					
+					// then instantiate a User, add the properties and the list of accounts to the constructor
+					User u =  new User(userId, username, password, role, accounts);
+					
+					// add the user to the list of users to return
+					allUsers.add(u);	
+				}
+			}
+		} catch (SQLException e) {
+			logger.warn("SQL exception thrown - can't retrieve all users from the DB");
+			e.printStackTrace();
+		}
+		// this will return the list of users that we initially generated at the start of this method
+		// and populated with the Users pulled from the DB.
+		return allUsers;
+	}
+	
+	public static void main(String[] args) {
+		UserDaoImpl udao = new UserDaoImpl();
+		
+		List<User> userList = udao.findAll();
+		
+		for (User user : userList) {
+			System.out.println(user);
+		}
+		
 	}
 
 	@Override

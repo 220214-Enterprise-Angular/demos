@@ -7,6 +7,7 @@ public class Account implements Serializable {
 	
 	private int id;
 	private double balance;
+	private int accOwner; // could be some type of ArrayList with all the user id's...just an idea
 	private boolean isActive; // remember the instance variable names do NOT need to adhere
 	
 	public Account() {
@@ -21,12 +22,34 @@ public class Account implements Serializable {
 	 *  - Generate hashCode & equals
 	 *  - Generate toString()
 	 */
-
-	public Account(int id, double balance, boolean isActive) {
+	public Account(int id, double balance, int accOwner, boolean isActive) {
 		super();
 		this.id = id;
 		this.balance = balance;
+		this.accOwner = accOwner;
 		this.isActive = isActive;
+	}
+	
+	// What if we create an Account from the console?
+	// We need this constructor in the case that we instantitae the Account in the Java Program.
+	// Then we send it to the database which assigns a Primary Key. (Serial Primary Key)
+	// When we return the object from the database, it will have its assigned ID
+	public Account(double balance, int accOwner, boolean isActive) {
+		super();
+		this.balance = balance;
+		this.accOwner = accOwner;
+		this.isActive = isActive;
+	}
+	
+	// getters & setter for the new field
+	// re-generate hashCode, equals and toString
+
+	public int getAccOwner() {
+		return accOwner;
+	}
+
+	public void setAccOwner(int accOwner) {
+		this.accOwner = accOwner;
 	}
 
 	public int getId() {
@@ -55,7 +78,7 @@ public class Account implements Serializable {
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(balance, id, isActive); // this way of hashing an object was introduced in the 7th version of Java (1.7)
+		return Objects.hash(accOwner, balance, id, isActive);
 	}
 
 	@Override
@@ -67,13 +90,15 @@ public class Account implements Serializable {
 		if (getClass() != obj.getClass())
 			return false;
 		Account other = (Account) obj;
-		return Double.doubleToLongBits(balance) == Double.doubleToLongBits(other.balance) && id == other.id
-				&& isActive == other.isActive;
+		return accOwner == other.accOwner && Double.doubleToLongBits(balance) == Double.doubleToLongBits(other.balance)
+				&& id == other.id && isActive == other.isActive;
 	}
 
 	@Override
 	public String toString() {
-		return "Account [id=" + id + ", balance=" + balance + ", isActive=" + isActive + "]";
+		return "Account [id=" + id + ", balance=" + balance + ", accOwner=" + accOwner + ", isActive=" + isActive + "]";
 	}
 
+	
+	
 }
