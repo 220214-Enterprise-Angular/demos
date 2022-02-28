@@ -75,6 +75,7 @@ public class AccountDaoImpl implements IAccountDao{
 		List<Account> ownedAccounts = new LinkedList<Account>();
 		
 		try (Connection conn = ConnectionUtil.getConnection()) {
+		
 			
 			String sql = "SELECT accounts.id, accounts.balance, accounts.active \r\n" + 
 					"			FROM accounts\r\n" + 
@@ -85,6 +86,7 @@ public class AccountDaoImpl implements IAccountDao{
 			PreparedStatement stmt = conn.prepareStatement(sql);
 			
 			stmt.setInt(1, accOwnerId);
+
 			
 			// Grab a ResultSet obj
 			ResultSet rs = stmt.executeQuery();
