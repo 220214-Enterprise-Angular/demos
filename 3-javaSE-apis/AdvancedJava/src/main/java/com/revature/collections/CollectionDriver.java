@@ -184,8 +184,6 @@ public class CollectionDriver {
 		Collections.sort(animalList, new SpeciesSorter()); // sorts by alternative sorting class 
 		
 		System.out.println(animalList);
-		
-		
 	}
 
 }

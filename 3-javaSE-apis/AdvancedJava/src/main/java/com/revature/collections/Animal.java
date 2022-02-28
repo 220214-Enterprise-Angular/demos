@@ -4,29 +4,28 @@ import java.util.Comparator;
 
 /**
  * 
- * A comparable object is an object capable of comparing itself with another object.
- * This class MUST implement the compareTo() method.
+ * A comparable object is an object capable of comparing itself with another
+ * object. This class MUST implement the compareTo() method.
  * 
- * The implementation of the compareTO() method defines 
- * 
- *
+ * The implementation of the compareTo() method defines how one Animal object is
+ * greater than or less than another Animal object.
  */
-public class Animal implements Comparable<Animal>{
-	
+public class Animal implements Comparable<Animal> {
+
 	private String species;
 	private int age;
-	
+
 	public Animal(String species, int age) {
 		super();
 		this.species = species;
 		this.age = age;
 	}
-	
+
 	// this is where we indicate how to sort an Animal object
 	@Override
 	public int compareTo(Animal otherAnimal) {
 		// TODO Auto-generated method stub
-		return this.age - otherAnimal.getAge(); 
+		return this.age - otherAnimal.getAge();
 	}
 
 	public String getSpecies() {
@@ -50,7 +49,6 @@ public class Animal implements Comparable<Animal>{
 		return "Animal [species=" + species + ", age=" + age + "]";
 	}
 
-	
 	// generates a number representing the properties of an object
 	@Override
 	public int hashCode() {
@@ -81,9 +79,8 @@ public class Animal implements Comparable<Animal>{
 		} else if (!species.equals(other.species))
 			return false;
 		return true;
-	}	
-	
-	
+	}
+
 }
 
 /**
@@ -101,8 +98,5 @@ class SpeciesSorter implements Comparator<Animal> {
 	@Override
 	public int compare(Animal a1, Animal a2) {
 		return a1.getSpecies().compareTo(a2.getSpecies());
-	}	
+	}
 }
-
-
-
