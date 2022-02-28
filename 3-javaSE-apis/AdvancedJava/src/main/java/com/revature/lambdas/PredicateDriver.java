@@ -2,6 +2,7 @@ package com.revature.lambdas;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.IntPredicate;
 import java.util.function.Predicate;
 
 public class PredicateDriver {
@@ -23,21 +24,36 @@ public class PredicateDriver {
 		employees.add(doug);
 		employees.add(bob);
 		
-		printEmployeesGreaterThan30(employees, new isGreaterThan30());
+		// external class that implements the Predicate interface
+		printEmployeesGreaterThan30(employees, new EmployeeAgeChecker());
 		
-		/**
-		 * CHALLENGE
-		 * Provide the predicate implementation via:
-		 * 
-		 * 1. Anonymous class
-		 * 2. Lambda Expression
-		 */
+		// anonymous class that implements Predicate interface
+		printEmployeesGreaterThan30(employees, new Predicate<Employee>() {
+
+			@Override
+			public boolean test(Employee e) {
+				return e.getAge() >= 30 ? true : false;
+			}		
+		});
+		
+		// lambda that provides the functionality for the test() method from Predicate interface
+		printEmployeesGreaterThan30(employees, e -> e.getAge() >= 30);
+		
+		// Primitive Functional Interface
+		IntPredicate greaterThanOrEqualTo30 = i -> i >= 30;
+		int someVar = 500;
+		System.out.println("Is " + someVar + " greater than or equal to 30?: " + greaterThanOrEqualTo30.test(someVar));
+		
+		// Predicate Chaining
+		IntPredicate lessThan100 = i -> i < 100;
+		System.out.println("Is " + someVar + " greater than or equal to 30 AND less than 100?: " + greaterThanOrEqualTo30.and(lessThan100).test(someVar));
+		
 	}
 	/**
 	 * params: List of employes
 	 * 		  - a condition to be passed in order to be printed
 	 * 
-	 * Predicate has a method called test which returns a boolean valu 
+	 * Predicate has a method called test which returns a boolean value 
 	 */
 	private static void printEmployeesGreaterThan30(List<Employee> employees, Predicate<Employee> ageCondition) {
 		
@@ -46,12 +62,11 @@ public class PredicateDriver {
 			if (ageCondition.test(e)) {
 				System.out.println(e + " passed the predicate age condition");
 			}
-			
 		});
 	}
 }
 // external class
-class isGreaterThan30 implements Predicate<Employee> {
+class EmployeeAgeChecker implements Predicate<Employee> {
 
 	@Override
 	public boolean test(Employee e) {
@@ -59,21 +74,3 @@ class isGreaterThan30 implements Predicate<Employee> {
 	}
 	
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
