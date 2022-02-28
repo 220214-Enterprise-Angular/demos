@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
+import java.util.function.Consumer;
 
 public class Driver {
 
@@ -73,14 +74,55 @@ public class Driver {
 		 * 2. Sort by providing an Anonymous class.
 		 * 3. Sort with a Lambda in 1 line.
 		 * 
-		 * 
+		 * Send a thumbs up in the reactions when you're done
 		 */
+		Collections.sort(employees, new AgeSorter());
 		
+		// anon class
+		Collections.sort(employees, new Comparator<Employee>() {
+
+			@Override
+			public int compare(Employee e1, Employee e2) {
+				// TODO Auto-generated method stub
+				return e1.getAge() - e2.getAge();
+			}
+		});
 		
+		// lambda way
+		Collections.sort(employees, (e1, e2) -> e1.getAge() - e2.getAge());
 		
+		// COnsuymer Interface forces you to implement the accept() method
+		
+		// assign a lambda function to a variable
+		Consumer<Employee> myMethod =  e -> System.out.println(e); // <- this is the implementation of the accept method
+		
+		employees.forEach(myMethod);
+		
+		// Method Referencing
+		employees.forEach(System.out::println); 
 		
 	}	
 }
+
+class AgeSorter implements Comparator<Employee> {
+
+	@Override
+	public int compare(Employee e1, Employee e2) {
+		
+//		if (e1.getAge() < e2.getAge()) {	
+//			return -1;
+//		} else if (e1.getAge() > e2.getAge()) {
+//			return 1;
+//		} else {
+//			return 0;
+//		}
+		
+		// ternary operator makes it more concise
+		return e1.getAge() - e2.getAge();
+		
+	}
+}
+
 
 // create the comparator class
 class NameSorter implements Comparator<Employee> {
