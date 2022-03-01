@@ -76,15 +76,47 @@ public class Heist {
 				}		
 			}
 		}
-
 	}
 	
+	private static class AscendingHackerThread extends HackerThread {
+
+		public AscendingHackerThread(Vault vault) {
+			super(vault);
+			// TODO Auto-generated constructor stub
+		}
+		
+		@Override
+		public void run() { 
+			for (int guess=0; guess<=MAX_PASSWORD; guess++) {
+				
+				if (vault.isCorrectPassword(guess)) {
+					System.out.println(this.getName() + " guessed the password! The password was " + guess);
+					System.exit(0); // stops the java app and exits with a status code that no issues occurred
+				}		
+			}
+		}	
+	}
 	
-	
+	// The only job of this thread is to count down from 10
 	private static class PoliceManThread extends Thread {
 		
-		
-		
+		@Override
+		public void run() {
+			
+			for (int i=10; i > 0; i--) {
+				
+				try {
+					Thread.sleep(1000); // sleep for 1 second in between iterations
+				} catch (InterruptedException e) {
+					e.printStackTrace();
+				} 
+				// pint out how many seconds left
+				System.out.println(i + " seconds left");
+			}
+			// after the for loop ends, tell the hackers that it's game over
+			System.out.println("Game over for you, hackers!");
+			
+			System.exit(0); // end the program
+		}
 	}
-	
 }
