@@ -29,7 +29,9 @@ public class ThreadCreation {
 		// of the main thread....
 		Thread t1 = new Thread(new Runnable() {
 
+			
 			public void run() {
+			
 				System.out.println("Thread 1 is running!");
 			}
 		});
@@ -39,7 +41,10 @@ public class ThreadCreation {
 		
 		t1.start(); // it's task is defined in the run() method
 		
+		System.out.println(t1.getName());
+		
 		lambdaThread.start();
+		System.out.println(lambdaThread.getName());
 		
 		try { // we're saying please wait for the t1 thread to complete 
 			t1.join(); // the main thread is invoking this method 

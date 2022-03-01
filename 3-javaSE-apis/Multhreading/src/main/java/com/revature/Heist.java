@@ -1,5 +1,9 @@
 package com.revature;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
+
 public class Heist {
 	
 	public static final int MAX_PASSWORD = 9999;
@@ -7,7 +11,30 @@ public class Heist {
 	public static void main(String[] args) {
 		
 		// the action begins here
+		// 1. Generate a random number to pass as the password for the Vault's constructor
+		Random random = new Random();
+		int password = random.nextInt(MAX_PASSWORD); // generates a random number between 0 - 9999;
 		
+		System.out.println("The password is " + password);
+		
+		// 2. Instantiate a Vault
+		Vault vault = new Vault(password);
+		
+		// 3. instantiate our 3 threads: 2 hackers, 1 cop
+		List<Thread> threads = new ArrayList<Thread>(); // only objects of classes that extend Thread can be added to this list
+		
+		// add an instance of each thread (desc. hacker, asc. Hacker, policeman thread to the list
+		DescendingHackerThread descHacker = new DescendingHackerThread(vault);
+		AscendingHackerThread ascHacker = new AscendingHackerThread(vault);
+		PolicemanThread policemanThread = new PolicemanThread();
+		
+		threads.add(descHacker); // I'm instantiating AND adding it to the list at the same time
+		threads.add(ascHacker);
+		threads.add(policemanThread);
+		
+		// 4. for each thread, run the start() method 
+		threads.forEach(t -> t.start());
+
 	}
 	
 	// this is a STATIC class that that it can be instantiated in the main() method of the enclosing class
@@ -98,12 +125,12 @@ public class Heist {
 	}
 	
 	// The only job of this thread is to count down from 10
-	private static class PoliceManThread extends Thread {
+	private static class PolicemanThread extends Thread {
 		
 		@Override
-		public void run() {
+		public void run() { // this fires when we run policeManThread.start();
 			
-			for (int i=10; i > 0; i--) {
+			for (int i=15; i > 0; i--) {
 				
 				try {
 					Thread.sleep(1000); // sleep for 1 second in between iterations
