@@ -16,7 +16,7 @@ public class App {
 	
 	// capture the path to the resource
 	private static final String INPUT_FILE = "C:\\Users\\SophieGavrila\\Desktop\\demos\\3-javaSE-apis\\ThrouputHttpServer\\src\\main\\resources\\war_and_peace.txt";
-	
+	private static final int NUMBER_OF_THREADS = 1;
 	
 	public static void main(String[] args) throws IOException {
 		
@@ -48,7 +48,7 @@ public class App {
 		server.createContext("/search", new WordCountHandler(text));
 		
 		// set up an executor service to schedule a thread to handle evey incoming HTTP request
-		Executor executor = Executors.newFixedThreadPool(2);
+		Executor executor = Executors.newFixedThreadPool(NUMBER_OF_THREADS);
 		
 		server.setExecutor(executor);
 		
@@ -82,7 +82,7 @@ public class App {
 			String[] keyValuePair = query.split("="); // [word, talk]
 			String action = keyValuePair[0]; // extract the first element
 			// check that the first element is word
-			String word = keyValuePair[1]; // capture the second part of the key value pair which is the word we're serachign for
+			String word = keyValuePair[1]; // capture the second part of the key value pair which is the word we're searching for
 			
 			if (!action.equals("word")) {
 				
