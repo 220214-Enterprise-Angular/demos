@@ -21,7 +21,8 @@ public class Heist {
 		Vault vault = new Vault(password);
 		
 		// 3. instantiate our 3 threads: 2 hackers, 1 cop
-		List<Thread> threads = new ArrayList<Thread>(); // only objects of classes that extend Thread can be added to this list
+		// only objects of classes that extend Thread can be added to this list
+		List<Thread> threads = new ArrayList<Thread>(); 
 		
 		// add an instance of each thread (desc. hacker, asc. Hacker, policeman thread to the list
 		DescendingHackerThread descHacker = new DescendingHackerThread(vault);
