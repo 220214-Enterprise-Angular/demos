@@ -5,6 +5,7 @@
 - Lambdas & Functional Interfaces
 - Multithreading
 - Stream API
+- Reflection and ORM's
 
 <br>
 
