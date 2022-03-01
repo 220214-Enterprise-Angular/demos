@@ -16,7 +16,7 @@ public class App {
 	
 	// capture the path to the resource
 	private static final String INPUT_FILE = "C:\\Users\\SophieGavrila\\Desktop\\demos\\3-javaSE-apis\\ThrouputHttpServer\\src\\main\\resources\\war_and_peace.txt";
-	private static final int NUMBER_OF_THREADS = 1;
+	private static final int NUMBER_OF_THREADS = 4; // 8?
 	
 	public static void main(String[] args) throws IOException {
 		
