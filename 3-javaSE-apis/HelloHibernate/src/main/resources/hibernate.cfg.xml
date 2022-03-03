@@ -36,8 +36,11 @@
 		<!-- VALIDATE: best for production checks to make sure that everything in the DB is as expected -->
 		<!-- NONE: hibernate doens't alter your shcema or do anything -->
 
-		<!-- List of XML mapping files -->
-		<mapping resource="Employee.hbm.xml" />
+		<!-- Prints out SQL statements as Hibernate generates them -->
+		<property name="hibernate.show_sql">true</property>
+		
+		<!-- List of mapping files -->
+		<mapping class="com.revature.models.Crime" /> 
 
 	</session-factory>
 </hibernate-configuration>
