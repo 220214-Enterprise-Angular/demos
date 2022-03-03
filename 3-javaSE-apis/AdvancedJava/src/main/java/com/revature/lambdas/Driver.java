@@ -96,11 +96,25 @@ public class Driver {
 		// assign a lambda function to a variable
 		Consumer<Employee> myMethod =  e -> System.out.println(e); // <- this is the implementation of the accept method
 		
-		employees.forEach(myMethod);
+		// The forEach method must take in an implementation of the only method available from the Consumer
+		// functional interface
+		employees.forEach(myMethod); // forEach method only takes in the implementation of the accept() method within the
+									 // Consumer interface
+		
+		employees.forEach(new Consumer<Employee>() { // with anonymous class and this is extra lines of code
+
+			@Override
+			public void accept(Employee e) {
+				System.out.println(e);
+				
+			}
+		});
 		
 		// Method Referencing
 		employees.forEach(System.out::println); 
 		
+		// for Each ONLY accepts some solution...some function implemention for the accept() method 
+		employees.forEach(e -> System.out.println(e));
 	}	
 }
 
