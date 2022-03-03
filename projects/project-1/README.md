@@ -8,8 +8,8 @@ This project will be to create a custom object relational mapping (ORM) framewor
 1. A public API that can be added as a Maven dependency in other projects
 
 2. File-based or programmatic configuration of entities
-     - think of programmatic configuration as the usage of methods & annotations like this in Hibernate
-     - think of file-based configuration as a separate file that defines which classed should be mapped as 
+     - think of programmatic configuration as the usage of a COnfiguration class [like this in Hibernate](https://subscription.packtpub.com/book/application-development/9781784391904/1/ch01lvl1sec16/configuring-hibernate-programmatically).
+     - think of file-based configuration as a separate file that defines which classed should be mapped as [like this in Hibernate](https://stackoverflow.com/questions/32824823/hibernate-mapping-classes-from-hibernate-cfg-xml).
 
 3. Programmatic persistence of entities (basic CRUD support)
      - Think of the `save()` and `get()` metthod's from Hibernate's `Session` interface.
