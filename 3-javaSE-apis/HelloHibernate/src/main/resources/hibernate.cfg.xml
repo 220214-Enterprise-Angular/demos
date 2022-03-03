@@ -30,7 +30,10 @@
 		<property name="hibernate.connection.pool_size">10</property>
 		
 		<!-- This allows Hibernate to control my schema in my database -->
-		<property name="hibernate.hbm2ddl.auto">create</property>
+		<property name="hibernate.hbm2ddl.auto">validate</property> <!-- CREATE drops and then recreates all tables -->
+		
+		<property name="hibernate.default_schema">public</property>
+		
 		
 		<!-- UPDATE: wouldn't delete anything, but would add tables or object  -->
 		<!-- VALIDATE: best for production checks to make sure that everything in the DB is as expected -->
@@ -41,6 +44,8 @@
 		
 		<!-- List of mapping files -->
 		<mapping class="com.revature.models.Crime" /> 
+		<mapping class="com.revature.models.SuperVillain" /> 
+		<mapping class="com.revature.models.SuperPrison" /> 
 
 	</session-factory>
 </hibernate-configuration>
