@@ -25,7 +25,7 @@ public class SuperVillain {
 	private int svillId;
 	
 	@Column(unique=true, nullable=false)
-	private String name;
+	private String name; // an ORM will have a class that models the information ABOUT this field
 	
 	private String superpower;
 	
