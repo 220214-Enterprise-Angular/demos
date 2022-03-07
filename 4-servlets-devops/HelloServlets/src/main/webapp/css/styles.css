@@ -1,0 +1,28 @@
+/*
+	CSS - Cascading Style Sheets
+	How we style HTML pages.  Below we've constructed CSS syling rules
+	for the different HTML elements on our web page.
+*/
+
+.supervillain-container {
+	
+	border: 3px solid red;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+form {
+	
+	border: 2px solid black;
+	padding: 10px;
+	margin: 10px;
+	
+}
+
+input {
+	
+	margin: 3px;
+	
+}

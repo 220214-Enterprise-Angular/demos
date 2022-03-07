@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Hello Servlets!</title>
+
+<!--  Establishing a connection between our stylesheet and the html document -->
+<link rel="stylesheet" type="text/css" href="css/styles.css"> <!-- External CSS styling -->
+
+</head>
+<body>
+
+	<div class="supervillain-container">
+
+		<h1>Welcome to Supervillain Servlets!</h1>
+
+		<!-- THe action matches the url pattern where my servlet is available -->
+		<form method="GET" action="dirserv">
+			<!-- IF you made your URL mapping DirServ -->
+
+			<p>Direct Servlets, GET request!</p>
+
+			<!-- This will generate a button, that when the user clicks it, it sends a GET -->
+			<!-- request to the serlvet mapped to /dirserv -->
+			<input type="submit" value="Direct Text Response">
+		</form>
+
+	</div>
+
+</body>
+</html>
