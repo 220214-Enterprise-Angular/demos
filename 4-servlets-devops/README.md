@@ -4,7 +4,7 @@ QC for this week will be held on **March 14th, 2022**. QC questions [here]() ðŸ‘
 ## Topics Covered
 - [HTTP](https://github.com/220214-Enterprise-Angular/demos/blob/main/4-servlets-devops/notes/http.md)
 - [Servlets](https://github.com/220214-Enterprise-Angular/demos/blob/main/4-servlets-devops/qc-questions.md#servlets)
-- [AWS]()
+- [AWS](https://github.com/220214-Enterprise-Angular/demos/blob/main/4-servlets-devops/qc-questions.md#aws)
   - Study guide [here]()
 - [DevOps]()
   - [CI/CD]()
