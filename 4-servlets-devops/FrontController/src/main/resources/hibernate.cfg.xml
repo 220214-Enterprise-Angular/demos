@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+  
+<hibernate-configuration>
+    <session-factory>
+  
+        <!-- Connection settings -->
+        <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+        <property name="hibernate.connection.url">jdbc:postgresql://week4-220214.cvtq9j4axrge.us-east-1.rds.amazonaws.com:5432/postgres</property>
+        <property name="hibernate.connection.username">postgres</property>  
+        <property name="hibernate.connection.password">postgres</property>
+        
+        <!-- Change your schema to your first name last initial all lower case -->
+        <property name="hibernate.default_schema">sophiag</property>
+  		<!--  We have to create these anticipate that you will create a schema with the above name -->
+  
+        <!-- SQL dialect -->
+        <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+  
+        <!-- Print executed SQL to stdout -->
+        <property name="show_sql">true</property>
+  
+  		<!-- When we start the application, there are automatically 10 connections ready to be used -->
+  		<property name="hibernate.connection.pool_size">10</property>
+  
+        <!-- Update database on startup -->
+        <property name="hibernate.hbm2ddl.auto">create</property>
+  		<!-- NONE, CREATE, UPDATE, VALIDATE (prod) -->
+  
+        <!-- Annotated entity classes -->
+        <mapping class="com.revature.models.Employee"/>
+         
+    </session-factory>
+</hibernate-configuration>

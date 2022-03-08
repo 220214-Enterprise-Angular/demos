@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Awesome App</title>
+</head>
+<body>
+
+	<h1>Welcome Employee</h1>
+	<h3>Please login below</h3>
+	
+	<!-- We need to create a form to take in parameters and pass the value of those parameters
+	to a servlet.  The servlet will call the EmployeeService -> which calls the DAO and will return the Employee
+	Object if it exists or not -->
+	
+	<form method="POST" action="login"> <!-- Sends this request to http://localhost:8080/FrontController/login -->
+		
+		<label>Username:</label>
+		<input type="text" name="username" placeholder="Enter a username please">
+		
+		<br />
+		
+		<label>Password:</label>
+		<input type="password" name="password" placeholder="Enter a password please">
+	
+		<input type="submit" value="Login!">
+	
+	</form>
+	
+	
+	<!-- This will be one other form which includes a button a user can click to view all employees in the DB -->
+		
+	<form method="GET" action="employees"> <!-- Sends this request to http://localhost:8080/FrontController/employees -->
+		
+		<p>To see all employees in the system, please click below</p>
+		<input type="submit" value="Click me!">
+	
+	</form>
+
+</body>
+</html>
