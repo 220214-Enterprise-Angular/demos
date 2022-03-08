@@ -20,6 +20,17 @@
 			<version>3.1.0</version>
 		</dependency>
 
+
+	<!--  Jackson is an Object Mapping Library (1 of, if not THE most popular tool for transforming a Java object)
+		to JSON format so that the data can be used in a JavaScript or frontend application 
+		
+		Marshalling is the process of converting a java object to JSON, unmarshalling is the reverse-->
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+			<version>2.13.0</version>
+		</dependency>
+
 	</dependencies>
 
 	<build>

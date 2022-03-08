@@ -5,7 +5,8 @@
 <title>Hello Servlets!</title>
 
 <!--  Establishing a connection between our stylesheet and the html document -->
-<link rel="stylesheet" type="text/css" href="css/styles.css"> <!-- External CSS styling -->
+<link rel="stylesheet" type="text/css" href="css/styles.css">
+<!-- External CSS styling -->
 
 </head>
 <body>
@@ -18,12 +19,41 @@
 		<form method="GET" action="dirserv">
 			<!-- IF you made your URL mapping DirServ -->
 
-			<p>Direct Servlets, GET request!</p>
+			<p>Direct Servlet, GET request!</p>
 
 			<!-- This will generate a button, that when the user clicks it, it sends a GET -->
 			<!-- request to the serlvet mapped to /dirserv -->
 			<input type="submit" value="Direct Text Response">
 		</form>
+
+
+		<!-- Create a button that will send POST request to our DirectServlet (at /dirserv) -->
+		<form method="POST" action="dirserv">
+
+			<p>Direct Servlet, POST request!</p>
+
+			<!-- This will generate a button, that when the user clicks it, it sends a POST -->
+			<!-- request to the serlvet mapped to /dirserv -->
+			<input type="submit" value="Send POST Request to Direct Servlet">
+		</form>
+
+
+		<!-- Create a button that will send GET request to our IndirectServlet (at ) -->
+		<form method="GET" action="indirserv">
+
+			<p>Indirect Servlet, GET request!</p>
+
+			<input type="submit" value="Send GET Request to Indirect Servlet, triggering sendRedirect()">
+		</form>
+
+				<!-- Create a button that will send GET request to our IndirectServlet (at ) -->
+		<form method="POST" action="indirserv">
+
+			<p>Indirect Servlet, POST request!</p>
+
+			<input type="submit" value="Send POST Request to Indirect Servlet, triggering forward()">
+		</form>
+		
 
 	</div>
 

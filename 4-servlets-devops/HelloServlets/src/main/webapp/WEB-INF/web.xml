@@ -1,21 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://Java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://Java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
   <display-name>HelloServlets</display-name>
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
   </welcome-file-list>
   
-  <!-- Deployment Descriptor aka web.xml and this file communicates with the web container and describes
-  deployment -->
   <servlet>
-  	<servlet-name>DirServ</servlet-name>
-  	<servlet-class>com.revature.directservlet.DirectServlet</servlet-class>
+    <servlet-name>DirServ</servlet-name>
+    <servlet-class>com.revature.directservlet.DirectServlet</servlet-class>
   </servlet>
-  
   <servlet-mapping>
-  	<servlet-name>DirServ</servlet-name>
-  	<url-pattern>/dirserv</url-pattern>
+    <servlet-name>DirServ</servlet-name>
+    <url-pattern>/dirserv</url-pattern>
   </servlet-mapping>
   
   
+  <servlet>
+    <servlet-name>IndirectServlet</servlet-name>
+    <servlet-class>com.revature.indirectservlet.IndirectServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>IndirectServlet</servlet-name>
+    <url-pattern>/indirserv</url-pattern> <!--  We changed this -->
+  </servlet-mapping>
+  
+
 </web-app>
