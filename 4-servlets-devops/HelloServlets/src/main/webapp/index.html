@@ -43,17 +43,48 @@
 
 			<p>Indirect Servlet, GET request!</p>
 
-			<input type="submit" value="Send GET Request to Indirect Servlet, triggering sendRedirect()">
+			<input type="submit"
+				value="Send GET Request to Indirect Servlet, triggering sendRedirect()">
 		</form>
 
-				<!-- Create a button that will send GET request to our IndirectServlet (at ) -->
+		<!-- Create a button that will send GET request to our IndirectServlet (at ) -->
 		<form method="POST" action="indirserv">
 
 			<p>Indirect Servlet, POST request!</p>
 
-			<input type="submit" value="Send POST Request to Indirect Servlet, triggering forward()">
+			<input type="submit"
+				value="Send POST Request to Indirect Servlet, triggering forward()">
 		</form>
-		
+
+		<form method="GET" action="sesserv">
+
+			<p>Session Servlet, GET request!</p>
+
+			<input type="submit" value="Send Mud Man to the Session">
+		</form>
+
+		<form method="GET" action="helpersesserv">
+
+			<p>Helper Session Servlet, GET request!</p>
+
+			<input type="submit" value="Retrieve the Villain from the Session!">
+		</form>
+
+
+		<!-- This form will allow the user to input valued for a custom SuperVillain object. -->
+		<!-- When they click the  button, it will store this custom object in the session. -->
+		<!--  in the doPost() method of the SessionServlet we will instantiate a SuperVillain object
+		based on the parameters that we capture from the body of this request -->
+		<form method="POST" action="sesserv">
+
+			<p>Session Servlet, POST request!</p>
+
+			<input type="text" name="vill-name" placeholder="Enter an evil name"> <br />
+			<input type="text" name="superpower" placeholder="Enter an evil superpower"> <br />
+			<input type="text" name="bounty" placeholder="Enter a bounty amount"> <br />
+
+			<input type="submit" value="Push a Custom Villain to the Session">
+		</form>
 
 	</div>
 

@@ -38,6 +38,13 @@ public class DirectServlet extends HttpServlet { // this comes from the Servlet 
 		
 		// We need to map this servlet class to a specific end point http://localhost:8080/HelloServlets/dirserv
 		// By setting up the servlet mapping in the web.xml file
+	
+		// call the servlet context
+		System.out.println("Context Example: " + getServletContext().getInitParameter("contextExample"));
+		
+		// call the servlet config
+		System.out.println("Config Example: " + getServletConfig().getInitParameter("configExample"));
+		
 	}
 	
 	
