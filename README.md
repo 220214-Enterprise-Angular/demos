@@ -9,17 +9,6 @@ This is the training repository for the Java Enterprise/Angular cohort starting 
 
 ---
 
-## Training Recaps
-Documents containing recaps of what was covered for a particular week will be listed here
-
-| Week | Topics Covered | Link |
-| :--- | :------------- | :--- |
-| 1 | Java Fundamentals + Data Structures |  |
-| 2 | SQL, RDBMS, JDBC |  |
-| 3 | Java SE APIs & Multithreading |  |
-| 4 | Servlets & AWS DevOps |  |
----
-
 ## Weekly Expectations:
 * Training starts everyday at 10:00AM EST and ends at 6:00PM EST
     - You are expected to be on time each day
