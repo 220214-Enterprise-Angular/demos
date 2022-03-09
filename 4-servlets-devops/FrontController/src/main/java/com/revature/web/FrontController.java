@@ -21,8 +21,6 @@ public class FrontController extends HttpServlet {
 		// 1. Save the URI and rewrite it
 		final String URI = request.getRequestURI().replace("/FrontController/", ""); // this leaves nothing but the end
 																				     // part like "/login" or "/employees"
-		
-		
 		// 2. Set up a Switch case statement in which we call the appropriate functionality based on the URI returned
 		switch(URI) {
 		
@@ -32,10 +30,9 @@ public class FrontController extends HttpServlet {
 			break;
 		case "employees":
 			// call some type of method to process that and pass the request and response objects
+			RequestHelper.processEmployees(request, response); // returns a JSON string of all the employees in the DB
 			break;
 		}
-		
-		
 
 	}
 

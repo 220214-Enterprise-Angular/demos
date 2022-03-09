@@ -1,5 +1,6 @@
 package com.revature.service;
 
+import java.util.List;
 import java.util.Optional;
 
 import com.revature.dao.EmployeeDao;
@@ -39,6 +40,11 @@ public class EmployeeService {
 		
 		// IF the employee object is present, return it, otherwise return null;
 		return (possibleEmp.isPresent() ? possibleEmp.get() : null); 
+	}
+	
+	// create a method called findAll() that returns a list of Employee objects
+	public List<Employee> findAll() {
+		return edao.findAll();	
 	}
 	
 	public int insert(Employee e) {

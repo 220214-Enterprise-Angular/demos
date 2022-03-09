@@ -62,5 +62,44 @@
 		</dependency>
 
 	</dependencies>
+	
+		<build>
+		<!-- This makes it so that when we run mvn clean package it generates FrontController.war INSTEAD of
+		 FrontController-0.0.1-SNAPSHOT.war-->
+		<finalName>${project.artifactId}</finalName>
+
+		<plugins>
+			<!-- Surefire plugin to print tests during build cycle -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>2.12.4</version>
+			</plugin>
+
+			<!-- Jacoco Plugin for printing code coverage reports -->
+			<plugin>
+				<groupId>org.jacoco</groupId>
+				<artifactId>jacoco-maven-plugin</artifactId>
+				<version>0.8.6</version>
+				<executions>
+					<!--first execution : for preparing JaCoCo runtime agent -->
+					<execution>
+						<id>prepare-agent</id>
+						<goals>
+							<goal>prepare-agent</goal>
+						</goals>
+					</execution>
+					<!--second execution : for creating code coverage reports -->
+					<execution>
+						<id>report</id>
+						<phase>test</phase>
+						<goals>
+							<goal>report</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
 
 </project>
