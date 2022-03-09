@@ -7,7 +7,7 @@
 <br>
 
 ## Step 1: Setup Sonar Cloud
-- Go [here](https://github.com/sophiagavrila/pipeline-demo/blob/main/how-to-deploy/sonar-cloud.md) for a SonarCloud setup guide.
+- Go [here](https://github.com/220214-Enterprise-Angular/demos/blob/main/devops/sonar-cloud.md) for a SonarCloud setup guide.
 
 <br>
 
