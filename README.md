@@ -15,7 +15,9 @@ Documents containing recaps of what was covered for a particular week will be li
 | Week | Topics Covered | Link |
 | :--- | :------------- | :--- |
 | 1 | Java Fundamentals + Data Structures |  |
-
+| 2 | SQL, RDBMS, JDBC |  |
+| 3 | Java SE APIs & Multithreading |  |
+| 4 | Servlets & AWS DevOps |  |
 ---
 
 ## Weekly Expectations:
