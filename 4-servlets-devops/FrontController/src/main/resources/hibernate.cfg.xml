@@ -13,7 +13,7 @@
         <property name="hibernate.connection.password">postgres</property>
         
         <!-- Change your schema to your first name last initial all lower case -->
-        <property name="hibernate.default_schema">sophiag</property>
+<!--         <property name="hibernate.default_schema">sophiag</property> -->
   		<!--  We have to create these anticipate that you will create a schema with the above name -->
   
         <!-- SQL dialect -->

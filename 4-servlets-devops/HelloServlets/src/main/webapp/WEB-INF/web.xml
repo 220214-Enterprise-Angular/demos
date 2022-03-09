@@ -15,7 +15,6 @@
 	</context-param>
 
 
-
 	<servlet>
 		<servlet-name>DirServ</servlet-name>
 		<servlet-class>com.revature.directservlet.DirectServlet
