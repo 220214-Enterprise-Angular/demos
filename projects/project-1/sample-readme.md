@@ -27,7 +27,7 @@ To-do list: [`for future iterations`]
 ## Getting Started  
 Currently project must be included as local dependency. to do so:
 ```shell
-  git clone https://github.com/210517-Enterprise/*your-repo*_p1.git
+  git clone https://github.com/*your-repo*_p1.git
   cd *your-repo*_p1
   mvn install
 ```
