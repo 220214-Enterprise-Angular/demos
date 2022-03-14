@@ -1,17 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
-       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans
-           http://www.springframework.org/schema/beans/spring-beans.xsd">
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans 
+        http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+        http://www.springframework.org/schema/context 
+        http://www.springframework.org/schema/context/spring-context-3.0.xsd">
 
-  <bean id="..." class="...">
-    <!-- collaborators and configuration for this bean go here -->
+<!--  In this files we're defining the Application Context - defining our Spring beans + their 
+dependencies -->
+
+<context:annotation-config />
+
+<!--  Here we're scanning all packages that begin with com.revature for the @Autowired annotation -->
+<context:component-scan base-package="com.revature" />
+
+	<!-- In Spring, the objects that form the backbone of your application and 
+		that are managed by the Spring IoC container are called beans. A bean is 
+		an object that is instantiated, assembled, and otherwise managed by a Spring 
+		IoC container. -->
+  <bean id="myNumGenerator" class="com.revature.NumberGeneratorImpl">
   </bean>
 
-  <bean id="..." class="...">
-    <!-- collaborators and configuration for this bean go here -->
+<!--  Who depends on the NumberGenerator?? -->
+<!--  COnstructor Injection -->
+<!--   <bean id="game" class="com.revature.GameImpl"> -->
+<!--     <constructor-arg ref="myNumGenerator" /> -->
+<!--   </bean> -->
+
+<!--  Setter Injection -->
+  <bean id="game" class="com.revature.GameImpl">
+    <property name="numberGenerator" ref="myNumGenerator" />
   </bean>
 
-  <!-- more bean definitions go here -->
 
 </beans>

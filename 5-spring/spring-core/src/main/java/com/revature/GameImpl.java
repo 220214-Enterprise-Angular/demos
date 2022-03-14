@@ -2,14 +2,16 @@ package com.revature;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Component;
 
+@Component("game") // an instance of this is @AUTOWIRED into the MessageGeneratorImpl class
 public class GameImpl implements Game{
 
 	// == constants ==
 	private static final Logger log = LoggerFactory.getLogger(GameImpl.class);
 
 	// == fields ==
-	private NumberGenerator numberGenerator; 
+	private NumberGenerator numberGenerator; // an instance of the implementation class of this interface
 	// We will use the Spring Application Context to tell Spring Core (IoC container)
 	// how to inkject objects into other objects
 
@@ -20,6 +22,22 @@ public class GameImpl implements Game{
 	private int biggest;
 	private int remainingGuesses;
 	private boolean validNumberRange = true;
+	
+	/**
+	 * ===== CONSTRCUTOR INJECTION ====== 
+	 * Constructor defines how the object is assembled.
+	 * Everytime we instantiate a GameImple object, it must come fully assembled
+	 * with a numberGenrator
+	 */
+//	public GameImpl(NumberGenerator numberGenerator) {
+//		this.numberGenerator = numberGenerator;
+//	}
+
+	// SETTER INJECTION
+	public void setNumberGenerator(NumberGenerator numberGenerator) {
+		this.numberGenerator = numberGenerator;
+	}
+	
 
 	@Override
 	public void reset() {

@@ -11,12 +11,12 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController // REST is an architecture for sending messages/info over HTTP
 public class HelloWorldController {
-
+	
 	@RequestMapping("/hello")
 	public String hello() {
 		
 		return "Testing Spring Boot DevTools";
 		
-	}
+	}	
 	
 }

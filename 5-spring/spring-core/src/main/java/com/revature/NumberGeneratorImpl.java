@@ -2,10 +2,14 @@ package com.revature;
 
 import java.util.Random;
 
+import org.springframework.stereotype.Component;
+
 /**
  * This class' job is to provide the implementation of the methods
  * defined in the Number Generator interface.
  */
+
+@Component("myNumGenerator")
 public class NumberGeneratorImpl implements NumberGenerator{
 
 	// == fields ==
