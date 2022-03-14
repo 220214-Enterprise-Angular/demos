@@ -7,18 +7,21 @@
         http://www.springframework.org/schema/context 
         http://www.springframework.org/schema/context/spring-context-3.0.xsd">
 
-<!--  In this files we're defining the Application Context - defining our Spring beans + their 
-dependencies -->
+<!-- We define our Application Context here, which is read by the Spring 
+		IoC container -->
+		
+	<!-- 	We need to mark the beans that this bean relies on as Components.... -->
+	<!-- In order to scan for for Annotations  when using Annotaiton configuration you add this: -->		
+	<context:annotation-config/> <!--  This will scan for the @Autowire annotation within the beans declared here -->
+	
+	<context:component-scan base-package="com.revature"/> <!-- This will scan all classes within the apacktes and look for the bean marked with @Component -->
 
-<context:annotation-config />
-
-<!--  Here we're scanning all packages that begin with com.revature for the @Autowired annotation -->
-<context:component-scan base-package="com.revature" />
 
 	<!-- In Spring, the objects that form the backbone of your application and 
 		that are managed by the Spring IoC container are called beans. A bean is 
 		an object that is instantiated, assembled, and otherwise managed by a Spring 
 		IoC container. -->
+		
   <bean id="myNumGenerator" class="com.revature.NumberGeneratorImpl">
   </bean>
 
@@ -32,6 +35,16 @@ dependencies -->
   <bean id="game" class="com.revature.GameImpl">
     <property name="numberGenerator" ref="myNumGenerator" />
   </bean>
+  
+<!-- 	When to Use Setter or Constructor Based DI? -->
+	
+<!-- 	- Since you can mix constructor-based & setter-based DI, it is a good rule of thumb  -->
+<!-- 	  to use CONSTRUCTORS for MANDATORY dependencies and SETTER methods for optional -->
+<!-- 	  dependencies. -->
+	  
+<!-- 	- The Spring team generally advocates constructor injection as it enables one to  -->
+<!-- 	  implement application components as immutable objects and the ensure that required -->
+<!-- 	  dependencies are not null. -->
 
 
 </beans>
