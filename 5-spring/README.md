@@ -1,7 +1,7 @@
 # Week 5: REST & Spring 🍃
 <br>
 
-## QC on Week of Jan. 10<sup>th</sup>
+## QC on Week of March 21<sup>st</sup>
 *QC Questions on Spring & REST [here](https://github.com/220214-Enterprise-Angular/demos/blob/main/5-spring/qc-questions.md)*
 
 <br>
@@ -18,7 +18,7 @@
 
 <br>
 
-## Spring Notes found [here](https://github.com/211129-Enterprise/demos/tree/main/5-spring/notes) 👈
+## Spring Notes found [here](https://github.com/220214-Enterprise-Angular/demos/tree/main/5-spring/notes) 👈
 - Spring Core
 - Spring IoC Container
 - Bean Wiring
