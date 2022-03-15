@@ -1,6 +1,7 @@
 package com.revature.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -42,6 +43,15 @@ public class FoodService {
 		foodRepo.deleteById(id);
 	}
 	
-	
+	public Food findFoodByDishName(String dishName) {
+		
+		// return the repository's impl class's method...
+		Optional<Food> possibleFood = foodRepo.findByDishNameIgnoreCase(dishName);
+		
+		// IF the optional returns a food record, return the value of the food object
+		// otherwise return null;
+		return possibleFood.isPresent() ? possibleFood.get() : null;
+		
+	}
 
 }

@@ -1,6 +1,10 @@
 package com.revature.data;
 
+import java.util.List;
+import java.util.Optional;
+
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 import com.revature.model.Food;
@@ -32,6 +36,25 @@ public interface FoodRepository extends JpaRepository<Food, Integer> { // <Objec
 	// all the.save(), .delete() .update() methods are all generated automatically...
 	
 	// property expressions - complex queries
+	// Spring can automatically infer the type query to be generated when you're looking 
+	// for the Object record based on 1 of its properties
+	Food findByDishName(String dishName); // SELECT * FROM food WHERE dishName = ?
+	
+	List<Food> findByOrderByDishName(String dishName);
+	
+	Optional<Food> findByDishNameIgnoreCase(String dishName);
+	
+	// create a custom query...
+	@Query(value="FROM food WHERE dishName like %:substring") // %: serves as placeholder for param
+	Optional<Food> findByDishNameContains(String substring);
+	
+	/**
+	 *  Property Expressions in Spring (look in Spring documentation about this)
+	 *  
+	 *  Spring Data JPA will examine all the properties of the class that corresponds
+	 *  to this repository and INFER SQL STATEMENTS based on the direct properties of the class.
+	 * 
+	 */
 }
 
 
