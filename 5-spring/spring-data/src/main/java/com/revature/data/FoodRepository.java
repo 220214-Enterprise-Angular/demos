@@ -40,12 +40,12 @@ public interface FoodRepository extends JpaRepository<Food, Integer> { // <Objec
 	// for the Object record based on 1 of its properties
 	Food findByDishName(String dishName); // SELECT * FROM food WHERE dishName = ?
 	
-	List<Food> findByOrderByDishName(String dishName);
+	List<Food> findByOrderByDishName(); // delete the parameter, returns all food, ordered by dish name
 	
 	Optional<Food> findByDishNameIgnoreCase(String dishName);
 	
 	// create a custom query...
-	@Query(value="FROM food WHERE dishName like %:substring") // %: serves as placeholder for param
+	@Query(value="FROM Food WHERE dishName like %:substring") // %: serves as placeholder for param
 	Optional<Food> findByDishNameContains(String substring);
 	
 	/**
