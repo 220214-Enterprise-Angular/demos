@@ -1,0 +1,12 @@
+global:
+  scrape_interval:     5s # Scrape new data every 5 seconds from your microservices
+  evaluation_interval: 5s # Evaluate that data every 5 seconds.
+scrape_configs:
+  # identify microservices to monitor
+  - job_name: 'myapi'
+    # endpoint exposed by the service with data on health 
+    metrics_path: '/api/actuator/prometheus'
+    static_configs:
+    # define host + port number
+    # why myapi instead of localhost? The host name is Docker service name when calling another container
+    - targets: ['myapi:5000']
