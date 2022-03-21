@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lists 101</title>
+</head>
+<body>
+      <!--
+        HTML Lists
+            There are 3 different types of lists to choose from in HTML:
+
+            - Ordered Lists <ol>
+                + lists where each item <li> is numbered
+                    + 1, 2, 3
+                    + A, B, C
+                    + I, II, II
+                    + i, ii, iii
+
+            - Unordered Lists <ul>
+                + lists where each item <li> has some bullet point
+
+            - Definition Lists
+                + lists made up of terms <dt> and their definitions <dd>
+    -->
+    <div id="hemp-milk-recipe">
+
+        <h1>Homemade Hemp Milk</h1>
+        <h2>Ingredients</h2>
+
+        <!-- Declare an unordered list (bullet points) -->
+        <ul style=list-style-type:square>
+            <li>1/4 cup of raw unshelled hemp seeds</li>
+            <li>4 cups of water</li>
+            <li>1-2 tsp Maple syrup</li>
+            <li>1/4 tsp of salt</li>
+        </ul>
+
+        <!-- Declare an ordered list -->
+        <h2>Directions</h2>
+        <ol type="I">
+            <li>Add all the ingredients to a high speed blender</li>
+                <ol type="a">
+                    <li>Plug blender in</li>
+                    <li>Turn blender on high-speed setting</li>
+                </ol>
+            <li>Blend on high for about 2 minutes</li>
+            <li>Store in fridge for up to 5 days</li>
+            <blockquote>
+                If you let it sit for more than 5 days it will go <em>bad</em>.
+            </blockquote>
+        </ol>
+
+
+        <!-- Definition List (or Description List) -->
+        <dl>
+            <dt>HyperText Markup Language</dt> <!-- key -->
+            <dd>A markup language for structuring content of a webpage</dd> <!-- value -->
+
+            <dt>Cascading Style Sheets</dt>
+            <dd>A rule-based styling language for describing the presentation of a document</dd>
+        </dl>
+
+        <ol type="1" reversed  start="10">
+            <li>Thing 1</li>
+            <li>Thing 2</li>
+            <li>Thing 3</li>
+        </ol>
+
+    </div>
+</body>
+</html>

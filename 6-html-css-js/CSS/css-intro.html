@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intro to CSS</title>
+
+    <!--
+        There are 3 ways of styling with CSS:
+        1. Inline Styling (not preferred because it's not maintanable as our code base grows)
+
+        2. Internal Styling - You supply the CSS styling rules in between the <style> tags within the <head> of an html document.
+
+        3. External Styling - You supply CSS rules in an external document which you link to
+        within the html document that's being styled.
+    -->
+
+    <!-- This is how you link to an external stylesheet -->
+    <link rel="stylesheet" href="styles/style.css">
+
+    <style>
+
+        /* This is a comment in CSS  */
+        div { /* This is an element selector */
+            font-family: 'Indie Flower', cursive;
+        }
+
+        /* We use a # to identify elements by ID */
+        #my-special-div {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            padding-left: 30%;
+            border: 2px aqua;
+            color: blueviolet;
+            background-color: burlywood;
+        }
+
+        /* We use a . to identify elements by class */
+        .my-special-class {
+            /* Since we don't have conflicting font families, we inherit from the div element selector rule*/
+            margin-top: 20%;
+            border:dashed rebeccapurple;
+            border-radius: 20px;
+            line-height: 18px;
+            background-color: aquamarine;
+        }
+    </style>
+
+</head>
+<body>
+    
+    <div id="inline-styling-example">
+
+        <h4>CSS rules are defined by key/value pairs, separated by a colon : </h4>
+        <p style="background-color: black; color:goldenrod">This is an example of inline styling</p>
+
+        <!-- Spans are inline strcutral tags that define 1 element-->
+        <span style="background-color: aqua;">Some content here</span>
+    </div>
+
+    <div id="internal-styling-example">
+
+        <h2>Selectors</h2>
+        <h3>Elements, Classes, &amp; ID's</h3>
+
+        <div id="my-special-div">
+            <p>This is a bunch of text identified by id <code>my-special-div</code></p>
+            <p>Some more text here</p>
+        </div>
+
+        <div class="my-special-class">
+            <p>This div belongs to a class labeled as <code>my-special-class</code></p>
+        </div>
+
+        <div class="my-special-class">
+            <p>This div belongs to a class labeled as <code>my-special-class</code></p>
+        </div>
+
+
+    </div>
+
+</body>
+</html>

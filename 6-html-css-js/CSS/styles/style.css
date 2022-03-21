@@ -1,0 +1,10 @@
+@import url('for-import.css'); /* The html document will heed these styling rules */
+
+body { /* Here we're styling the entire body of the html doc*/
+    background-color: rgb(255, 100, 255);
+}
+
+/* My special div is idnetified by its ID so we select it with # */ 
+#my-special-div { /* This will overwrite the above rule set for the entire body of the doc */
+    background-color: coral;
+}
