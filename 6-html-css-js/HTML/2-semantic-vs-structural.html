@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semantic vs. Structural</title>
+</head>
+<body>
+    <h1>Generic (Structural) Markup Tags </h1>
+    <p>These are elements used to present the content itself</p>
+    <!--
+        Structural Markup tags (not all-inclusive)
+        <h#>        headings
+        <p>         paragraphs
+        <b>         bold
+        <i>         italic
+        <sup>       superscript
+        <sub>       subscript
+        <br>        line break
+        <ol>        ordered lists
+        <ul>        unordered lists
+        <li>        list items
+    -->
+
+    <h1>Semantic Markup</h1>
+    <p>Semantic tags are used to provide extra information about the content that's enclosed.</p>
+
+    <!-- I will enclose all of my semantic tags within a div -->
+
+    <div id="semantic-tags-101">
+
+
+        <p>Steve <em>wants</em> chocolates.</p>
+        <del>This is deleted text</del>
+
+        <br />
+
+        <p>What is <abbr title="HyperText Markup Language">HTML</abbr>?</p>
+        <p>What is <abbr title="Cascading Style Sheets">CSS</abbr>?</p>
+    </div>
+
+    <div id="contact-info">
+        <address>
+            <p>
+                <a href="mailto:psherman@mail.com">Email me!</a>
+            </p>
+
+            <p>
+                42 Wallaby Way, Sydney, Australia
+            </p>
+
+        </address>
+    </div>
+
+    <!-- Div is a block-line tag -->
+    <div id="movie-stuff">
+
+        <!-- p is inline -->
+        <p>From the Academy Award Winning film <em>Forest Gump</em>, the famous quote from Tom
+        Hanks:</p>
+
+        <blockquote>
+            Mama always said <q>Life is like a box of chocolates...</q>
+        </blockquote>
+
+    </div>
+
+
+
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html> <!-- DOCTTYPE declares the language of the document (HTML5) -->
+<html lang="en"> <!-- Declares where your HTML code begins -->
+<head> <!-- contians metadata about the document-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Basics: Structure</title>
+
+        <!--
+            <head>
+                contains information about the page, rather than the information shown.
+                We can include some information within the head such as:
+
+                - <style> tag to apply internal CSS styling to the webpage
+                - <link> tag for making use of an external resource (external CSS)
+                - <script> tag for making use of JavaScript, which makes our webpages more dynamic - NOT ideal!
+                - <meta> tag for including meta-informmation about the content of the page -- used more for SEO purposes
+                - <title> tag for the title of the webpage.
+        -->
+</head>
+<body>
+    <!--
+        <body>
+            Contains info/content that will be displayed to the user,
+            when rendered by the browser
+    -->
+    <h1>Welcome to my page AGAIN!</h1>
+
+            <!--
+            HTML tags/elements
+            Used to indicate how content should be displayed...
+            Usually they require an opening and a closing tag.  Those that do NOT require a closing tag
+            are called self-closing tags.
+
+                <p> paragraph
+                <h#>    headings (range from 1-6, 1 being the largest)
+                <div>   division/divider; used to group related elements together
+                    ** The <span> tag is much like the <div> element, but <div> is a block-level element and <span> is an inline element.
+                <img>   image (self-closing)
+                <a>     anchor; used to create links to other webpages, or to sections of the current page
+                <br>    line break (self-closing)
+                <hr>    horizontal rule
+                <input> creates a field for user input or some sort of [text, checkbox, etc.] (self-closing)
+        -->
+
+
+    <p>This text might be used to introduce something about the page</p>
+
+    <p>Let's
+
+
+        See 
+
+
+        if HTML cares about whitespace
+    </p>
+
+    <h2>This is a subheading</h2>
+
+    <br />
+    <br />
+
+    <p>4 &lt; 5</p>
+    <p>HTML &amp; CSS</p>
+    <p>Here is&nbsp;text</p>
+
+            <!--
+            Escape characters
+                There are some characters that are used in and reserved
+                for HTML code. If you want to use them in your content
+                then you need to use their escape character equivalents.
+                <       -   Less-than       &lt;        &#60;
+                >       -   Greater-than    &gt;        &#61;    
+                &       -   Ampersand       &amp;       
+                ""      -   Quotations      &quot;
+                        -   Space           &nbsp;
+        -->
+
+</body>
+</html>
