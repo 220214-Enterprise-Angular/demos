@@ -40,15 +40,19 @@ function addStudent() {
         document.getElementById('student-table-body').appendChild(row);
 
         // 9. set the inner text of each cell the information we captured from the input
-        idCell.innerText = 1; // add a function that returns a value that auot-increments
+        idCell.innerText = idGenerator().next().value; // add a function that returns a value that auot-increments
         nameCell.innerText = nameField;
         majorCell.innerText = majorField;
 
-        // set the input fields to '' every time we click the button
-
+        // 10. set the input fields to '' every time we click the button
+        document.getElementById('student-name').value='';
+        document.getElementById('student-major').value='';
     }
 }
 
-// clear out the input field
+let counter = 1;
 
 // we need some function to increment the ID
+function* idGenerator() {
+    yield counter++;
+} // generator functions introduced in ES6
