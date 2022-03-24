@@ -86,15 +86,5 @@ sudo docker run -d -p 5000:5000 myapp:auto
 ### :tada: All done!
 > *Your application is now running in a docker container accepting requests via the IPv4 address of your EC2 instance*
 
-- Team 1 Public IPv4 DNS: `ec2-3-86-216-116.compute-1.amazonaws.com`
-- Team 2 Public IPv4 DNS: `ec2-54-144-253-62.compute-1.amazonaws.com` 
-- Team 3 Public IPv4 DNS: `ec2-52-90-7-20.compute-1.amazonaws.com`
-- Team 4 Public IPv4 DNS: `ec2-3-95-26-70.compute-1.amazonaws.com`
-- Team 5 Public IPv4 DNS: `ec2-3-82-127-19.compute-1.amazonaws.com`
-- Team 6 Public IPv4 DNS: `ec2-18-206-252-36.compute-1.amazonaws.com`
-- Team 7 Public IPv4 DNS: `ec2-54-159-181-142.compute-1.amazonaws.com`
 
 If you want to hit the endpoins supported by your Spring Rest Controllers, you would have to do so at the PORT and CONTEXT that you have specified...
-
-For example [this](https://github.com/211129-Enterprise/demos/tree/main/5-spring/CompleteAPI) Spring Boot app running on Team 1's EC2 instance would be avilabale at `ec2-3-86-216-116.compute-1.amazonaws.com:5000/api`
-
