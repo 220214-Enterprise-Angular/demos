@@ -1,1 +1,24 @@
-<h2>{{cat}}</h2>
+<h2>The Cats</h2>
+<ul class="cats">
+  <li *ngFor="let cat of cats"> <!-- cats refers to the cats.component.ts property called cats -->
+    <!-- cats is the array cat objects-->
+    <!--toggle the class of the cat-->
+    <!-- When the current row cat is the same as the selected cat, Angular adds the selected CSS class-->
+    <button [class.selected]="cat === selectedCat" type="button" (click)="onSelect(cat)"></button>
+
+    <span class="badge">{{cat.id}} </span>
+    <span class="name">{{cat.name}}</span>
+
+  </li>
+</ul>
+
+<!-- ngIf will only display the below details IF a selectedCat exists-->
+<div *ngIf="selectedCat">
+
+  <h2>{{selectedCat.name | uppercase}}</h2>
+  <div><span>id: </span>{{selectedCat.id}}</div>
+
+  <label for="name">Cat name:</label>
+  <input id="name" [(ngModel)]="selectedCat.name" placeholder="name">
+
+</div>
