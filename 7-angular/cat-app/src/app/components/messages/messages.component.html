@@ -1,0 +1,10 @@
+<!-- ONLY IF the messageService's array is > 0 in lenght, will I show messages -->
+<div *ngIf="messageService.messages.length">
+
+<!-- The below code will be displayed -->
+  <h2>Messages</h2>
+  <button type="button" class="clear" (click)="messageService.clear()">Clear messages</button>
+
+  <div *ngFor='let m of messageService.messages'>{{m}}</div>
+
+</div>

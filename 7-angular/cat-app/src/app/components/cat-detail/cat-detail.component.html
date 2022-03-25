@@ -1,0 +1,13 @@
+
+<!-- ngIf will only display the below details IF a cat exists-->
+<div *ngIf="catToDisplay">  <!-- How  do we decide what cat to display ?-->
+
+  <h2>{{catToDisplay.name | uppercase}}</h2>
+  <div><span>id: </span>{{catToDisplay.id}}</div>
+
+  <label for="name">Cat name:</label>
+  <input id="name" [(ngModel)]="catToDisplay.name" placeholder="name">
+
+
+<button type="button" (click)="goBack()"> go back</button>
+</div>

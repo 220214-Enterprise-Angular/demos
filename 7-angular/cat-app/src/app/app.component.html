@@ -1,3 +1,12 @@
 <!-- This is the html template for how the component should look -->
 <h1>{{title}}</h1> <!-- {{  }} perform interpolation binding -->
-<app-cats></app-cats>
+
+<nav>
+  <a routerLink="/cats">All Cats</a>
+  <a routerLink="/dashboard">Top Cats</a>
+</nav>
+
+<router-outlet></router-outlet> <!-- parent of app-cat-details-->
+<!-- tells the router where to display routed views-->
+<!--router-outlet is a router directive-->
+<app-messages></app-messages>

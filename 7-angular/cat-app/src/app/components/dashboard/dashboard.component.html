@@ -1,0 +1,10 @@
+<h2>Top Cats</h2>
+
+<div class="cats-menu">
+
+  <!-- {{}} ionterpolation binding to createe a path with the cat's id -->
+  <a  *ngFor="let c of cats" routerLink="/detail/{{c.id}}">
+    {{c.name}}
+  </a>
+
+</div>

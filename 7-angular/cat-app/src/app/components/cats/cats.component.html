@@ -12,13 +12,9 @@
   </li>
 </ul>
 
-<!-- ngIf will only display the below details IF a selectedCat exists-->
-<div *ngIf="selectedCat">
+<!-- selector for the cat-detail component-->
+<!-- I must bind the select cat to the cat property of the cat-details component-->
+<app-cat-detail [catToDisplay]="selectedCat"></app-cat-detail>
+<!--PROPERTY BINDING-->
 
-  <h2>{{selectedCat.name | uppercase}}</h2>
-  <div><span>id: </span>{{selectedCat.id}}</div>
-
-  <label for="name">Cat name:</label>
-  <input id="name" [(ngModel)]="selectedCat.name" placeholder="name">
-
-</div>
+<!-- We reduced the reponsibilities of the cats component-->
