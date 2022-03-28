@@ -19,6 +19,7 @@ import com.revature.service.UserService;
 
 @RestController
 @RequestMapping("/users") // all functionality is available at http://localhost:5000/api/users...
+@CrossOrigin(origins="*", allowedHeaders="*") // allows this usercontroller to be hit by other resources
 public class UserController {
 
 	@Autowired // inject the service dependency into our controller class
