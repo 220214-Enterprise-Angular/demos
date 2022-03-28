@@ -109,6 +109,12 @@
       <div class="col-12">
         <button type="submit" class="btn btn-primary" (click)="registerUser()">Register</button>
       </div>
+
+      <div *ngIf="clientMessage.message.length > 0" class="alert alert-success" role="alert">
+        {{clientMessage.message}}
+      </div>
+
+
     </form>
 
   </div>

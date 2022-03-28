@@ -1,0 +1,36 @@
+<div>
+
+  <div>
+    <!-- one way data bind {{interpolation}}-->
+    <h2 class="card-header text-center">{{title}}</h2>
+  </div>
+
+  <div class="card-body">
+
+    <ul class="list-group" *ngFor="let u of users">
+
+      <li class="list-group-item">Id: {{u.id}}</li>
+      <li class="list-group-item">First Name: {{u.firstName}}</li>
+      <li class="list-group-item">Last Name: {{u.lastName}}</li>
+      <li class="list-group-item">Username: {{u.username}}</li>
+      <li class="list-group-item">Email: {{u.email}}</li>
+
+      <br />
+
+    </ul>
+
+     <!-- A message to display if there are no users in the array-->
+    <div *ngIf="users.length == 0">
+      {{clientMessage.message}} <!-- The message will ONLY appear if the above statement is true -->
+    </div>
+
+  <!-- A button to re-fetch users -->
+  <div>
+    <!-- In the case that more users were added while you were still on that page -->
+    <button class="btn btn-secondary btn-center" (click)="findAllUsers()">Fetch Users!</button>
+  </div>
+
+
+  </div>
+
+</div>

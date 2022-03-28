@@ -1,3 +1,4 @@
+import { AllComponent } from './components/all/all.component';
 import { MainComponent } from './components/main/main.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
@@ -9,8 +10,9 @@ const routes: Routes = [
   {path: '', component:MainComponent, pathMatch: "full"}, // upon initializing the app, it loads the main component
   {path: 'main', component: MainComponent},
   {path: 'register', component: RegisterComponent},
+  {path: 'all', component: AllComponent},
 
-  {path: '**', component: MainComponent} // a WildCard Route is used to handle unknown paths (ALWAYS goes last)
+  {path: '**', component: MainComponent}, // a WildCard Route is used to handle unknown paths (ALWAYS goes last)
 ];
 
 @NgModule({
