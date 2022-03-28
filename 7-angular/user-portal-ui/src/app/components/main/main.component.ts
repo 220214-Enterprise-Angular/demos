@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainComponent {
 
-  title = 'User Portal'
-  image = "assets/network.png"
+  title = 'User Portal';
+  image = "assets/network.png";
 
 }
