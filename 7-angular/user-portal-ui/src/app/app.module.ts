@@ -9,6 +9,8 @@ import { RegisterComponent } from './components/register/register.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { AllComponent } from './components/all/all.component';
+import { FindComponent } from './components/find/find.component';
+import { RemoveComponent } from './components/remove/remove.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { AllComponent } from './components/all/all.component';
     NavComponent,
     MainComponent,
     RegisterComponent,
-    AllComponent
+    AllComponent,
+    FindComponent,
+    RemoveComponent
   ],
   imports: [
     BrowserModule,

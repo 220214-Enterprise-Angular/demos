@@ -23,6 +23,23 @@ export class UserService {
   // first add HttpClient Module to your app.module.ts file
   constructor(private http: HttpClient) { }
 
+  deleteUserById(id: number): Observable<any> { // Observables help you handle data fetched asynchronously
+
+    return this.http.delete(`${userUrl}/${id}`)
+      .pipe(catchError(this.handleError));
+  }
+
+
+  findUserById(id: number) : Observable<User> {
+
+    console.log(`User entered id: ${id}`);
+    // make a GET request to http://localhost:5000/api/users/{id}
+    return this.http.get<User>(`${userUrl}/${id}`, this.httpOptions)
+      .pipe(
+        catchError(this.handleError) // we defined this callback function at the bottom of this service class
+      );
+  }
+
   findAllUsers(): Observable<User[]> {
 
     return this.http.get<User[]>(userUrl, this.httpOptions)

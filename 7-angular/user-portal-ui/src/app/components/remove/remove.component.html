@@ -1,0 +1,47 @@
+<div>
+
+  <div>
+    <!-- one way data binding {{interpolation}}-->
+    <h2 class="card-header text-center">{{title}}</h2>
+  </div>
+
+  <div class="card-body">
+
+    <h5 class="card-title">Enter the Id of the User you want to remove:</h5>
+
+    <div class="input-group flex-nowrap">
+
+      <span class="input-group-text" id="addon-wrapping">Id</span>
+
+      <!-- take the data FROM the template and pass it to a user object (2 way data binding)-->
+      <!-- [(ngModel)]-->
+      <input [(ngModel)]="userId" name="userId" type="number" class="form-control" placeholder="Enter User's Id" (keydown.enter)="removeUser()"> <!--We have to build these methods-->
+
+      <!-- Use event binding to invpoke a method when you click it-->
+      <button class="btn btn-secondary" (click)="removeUser()">Remove</button>
+    </div>
+
+
+    <!-- *ngIf Add a message IF something goes wrong using truthy/falsey-ness -->
+    <div *ngIf="clientMessage.message.length" class="alert" role="alert">
+
+        {{clientMessage.message}}
+
+    </div>
+
+  </div>
+
+</div>
+
+
+<!-- STep 1 Routing-->
+
+<!-- Step 2 add the routerlink to the nav bar so when we click it, we see this -->
+
+<!-- Step 3. Add the template html (copy from the find componenet) -->
+
+<!--Step 4. build the properties in the component.ts class file & add 2 way data binding-->
+
+<!-- Step 5. bulld the deleteUser() method in the UserService -->
+
+<!-- Step 6. call the user service method from the remove component -->

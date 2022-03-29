@@ -1,0 +1,45 @@
+<div>
+
+  <div>
+    <!-- one way data binding {{interpolation}}-->
+    <h2 class="card-header text-center">{{title}}</h2>
+  </div>
+
+  <div class="card-body">
+
+    <h5 class="card-title">Enter the Id of the User you want to find:</h5>
+
+    <div class="input-group flex-nowrap">
+
+      <span class="input-group-text" id="addon-wrapping">Id</span>
+
+      <!-- take the data FROM the template and pass it to a user object (2 way data binding)-->
+      <!-- [(ngModel)]-->
+      <input [(ngModel)]="userId" name="userId" type="number" class="form-control" placeholder="Enter User's Id" (keydown.enter)="findUser()">
+
+      <!-- Use event binding to invpoke a method when you click it-->
+      <button class="btn btn-secondary" (click)="findUser()">Find</button>
+    </div>
+
+    <!-- *ngIf use a STRUCTURAL DIRECTIVE to display the user's info below-->
+    <!-- IF this.user has the user.id > 0, display the user info -->
+    <ul *ngIf="this.user.id" id="user-info">
+
+      <li class="list-group-item">Id: {{user.id}}</li>
+      <li class="list-group-item">First Name: {{user.firstName}}</li>
+      <li class="list-group-item">Last Name: {{user.lastName}}</li>
+      <li class="list-group-item">Username: {{user.username}}</li>
+      <li class="list-group-item">Email: {{user.email}}</li>
+
+    </ul>
+
+    <!-- *ngIf Add a message IF something goes wrong using truthy/falsey-ness -->
+    <div *ngIf="clientMessage.message.length" class="alert alert-danger" role="alert">
+
+        {{clientMessage.message}}
+
+    </div>
+
+  </div>
+
+</div>

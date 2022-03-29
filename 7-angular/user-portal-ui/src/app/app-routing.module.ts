@@ -3,6 +3,8 @@ import { MainComponent } from './components/main/main.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { RegisterComponent } from './components/register/register.component';
+import { FindComponent } from './components/find/find.component';
+import { RemoveComponent } from './components/remove/remove.component';
 
 const routes: Routes = [
 
@@ -11,6 +13,8 @@ const routes: Routes = [
   {path: 'main', component: MainComponent},
   {path: 'register', component: RegisterComponent},
   {path: 'all', component: AllComponent},
+  {path: 'find', component: FindComponent},
+  {path: 'remove', component: RemoveComponent},
 
   {path: '**', component: MainComponent}, // a WildCard Route is used to handle unknown paths (ALWAYS goes last)
 ];
