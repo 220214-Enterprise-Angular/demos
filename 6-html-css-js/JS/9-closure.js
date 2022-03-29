@@ -24,9 +24,15 @@ console.log(countCar());
 //     return `Apple count is ` + ++count; // won't work!
 // }
 
+/**
+ * 
+ * CLOSURE solves the issue of sharing a global variable 
+ * as nested functions hold the variables of outer functions.
+ * 
+ * CLOSURE is JavaScript's attempt at encapsulation. 
+ */
 
 function makeCounter(noun) {
-
 
     let count = 0;
 

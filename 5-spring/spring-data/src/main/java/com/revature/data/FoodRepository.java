@@ -23,7 +23,7 @@ import com.revature.model.Food;
 // Since we specified JpaRespository<Food, Integer>, it know that the PK data type 
 // is Integer, and the type of object it operates on is Food.
 
-@Repository // this is called a Stereotype Annotation - it's a special TYPE of component
+// this is called a Stereotype Annotation - it's a special TYPE of component
 public interface FoodRepository extends JpaRepository<Food, Integer> { // <Object, PK data type>
 // Spring Data automatically generates the DAO Impl class of this interface and all crud methods
 	
