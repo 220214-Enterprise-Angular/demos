@@ -2,10 +2,12 @@
 @import "~bootstrap/dist/css/bootstrap.css";
 
 body {
-  background-color:whitesmoke;
+  background-color:aquamarine;
   height: 100%;
 }
 
 .card {
   padding: 1%;
 }
+
+

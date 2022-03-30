@@ -11,6 +11,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { AllComponent } from './components/all/all.component';
 import { FindComponent } from './components/find/find.component';
 import { RemoveComponent } from './components/remove/remove.component';
+import { HomeComponent } from './components/home/home.component';
+import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { RemoveComponent } from './components/remove/remove.component';
     RegisterComponent,
     AllComponent,
     FindComponent,
-    RemoveComponent
+    RemoveComponent,
+    HomeComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

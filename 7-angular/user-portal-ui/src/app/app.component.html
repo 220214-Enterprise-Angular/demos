@@ -1,9 +1,13 @@
-<app-nav></app-nav>
+<app-home *ngIf="!isLoggedIn"></app-home>
+
+
+<!--Only show the nav bar and router-outlet IF the user is logged in-->
+<app-nav *ngIf="isLoggedIn"></app-nav>
 
 <!-- I need a directive -->
 <!-- The router outlet will display the component that  is correlated to eh path of the URL-->
 
-<div class="container">
+<div class="container" *ngIf="isLoggedIn">
 
   <div class="card border-0 my-auto w-100">
 

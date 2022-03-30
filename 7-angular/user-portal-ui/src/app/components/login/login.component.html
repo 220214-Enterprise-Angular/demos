@@ -1,0 +1,26 @@
+<div>
+
+    <div class="card-body">
+
+      <form>
+
+        <div>
+          <input [(ngModel)]="username" name="username" type="text" placeholder="Username" autocomplete="off">
+        </div>
+
+        <div>
+          <input [(ngModel)]="password" name="password" type="password" placeholder="Password" autocomplete="off">
+        </div>
+
+        <!-- Hide the button when the request is loading-->
+        <div class="btn btn-secondary" (click)="login()" *ngIf="!isLoading">Log in</div>
+
+        <!-- When the login Error Message changes, then the full string will be displayed-->
+        <p>{{loginErrMsg}}</p>
+
+      </form>
+
+    </div>
+
+
+</div>
