@@ -8,5 +8,5 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'user-portal-ui';
 
-  isLoggedIn: boolean = false;
+  public isLoggedIn: boolean = false;
 }
