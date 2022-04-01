@@ -42,6 +42,7 @@ export class UserService {
 
   findAllUsers(): Observable<User[]> {
 
+    // GET request to this URL  http://localhost:5000/api/users
     return this.http.get<User[]>(userUrl, this.httpOptions)
       .pipe(catchError(this.handleError));
 

@@ -45,7 +45,8 @@ export class LoginComponent{
           this.appComponent.isLoggedIn = true;
 
           // updateUser data (to be show in all other components)
-          this.appComponent.updateUserData(this.username);
+          this.appComponent.updateUserData(data.body.username); // setting the username equal to the pr
+                                                                // property retunred in the HTTP respnse
 
         },
         // what to do if it isn't successful
