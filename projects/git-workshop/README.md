@@ -1,8 +1,8 @@
 # Group Exercises for Understanding GitHub
 
 > Still confused about Git? Check out [this video](https://app.pluralsight.com/course-player?clipId=8dc1a5de-01c5-452e-a45f-d2f77a980e1c)! :point_left: <br>
-> More resources are available on the [resources page](https://github.com/210222-reston-java-msa/demos/blob/main/week4/GitWorkshop/resources.md) <br>
-> If you get stuck, use the [cheatsheet](https://github.com/210222-reston-java-msa/demos/blob/main/week4/GitWorkshop/cheatsheet.md).
+> More resources are available on the [resources page](https://github.com/220214-Enterprise-Angular/demos/blob/main/projects/git-workshop/resources.md) <br>
+> If you get stuck, use the [cheatsheet](https://github.com/220214-Enterprise-Angular/demos/blob/main/projects/git-workshop/cheatsheet.md).
 
 <br>
 
