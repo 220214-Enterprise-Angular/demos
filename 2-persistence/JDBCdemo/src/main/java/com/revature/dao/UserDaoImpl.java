@@ -8,6 +8,7 @@ import java.sql.Statement;
 import java.sql.Types;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import org.apache.log4j.Logger;
 
@@ -44,7 +45,7 @@ public class UserDaoImpl implements IUserDao { // save with ctrl + shift + s
 			
 			// STep 4 set all the values of the ?'s
 			stmt.setString(1, u.getUsername()); // the 1 refers to the order of the ?'s in the prepared statement
-			stmt.setString(2,  u.getPwd()); 
+			stmt.setString(2,  u.getPwd()); // Here we'e setting the second ?
 			
 			// This is a work around to transpose a Java ENUM to a RDBMS ENUM....
 			stmt.setObject(3, u.getRole(), Types.OTHER);
@@ -55,7 +56,7 @@ public class UserDaoImpl implements IUserDao { // save with ctrl + shift + s
 			
 			if ((rs = stmt.executeQuery()) != null) { // rs = stmt.executeQuery will generate a record of data to iterate over
 
-				// if we reutrn data, we iterate over it 
+				// if we return data, we iterate over it 
 				rs.next(); // moves the cursor of the ResultSet over the information
 				
 				// capture the PK and save it as the user's ID
@@ -136,7 +137,7 @@ public class UserDaoImpl implements IUserDao { // save with ctrl + shift + s
 			e.printStackTrace();
 		}
 
-		return u; // this successfully returns the initlaized User object with the data returned
+		return u; // this successfully returns the initialized User object with the data returned
 	}
 
 	/**
@@ -180,23 +181,39 @@ public class UserDaoImpl implements IUserDao { // save with ctrl + shift + s
 					User u = new User(userId, username, password, role, new LinkedList<Account>());
 					allUsers.add(u);		
 				} else {
+
 					Account a = new Account(accId, balance, userId, isActive);
-					List<Account> accounts = new LinkedList<Account>();
-					
-					// add the instantiated account to the list
-					accounts.add(a);
-					
-					// then instantiate a User, add the properties and the list of accounts to the constructor
-					User u =  new User(userId, username, password, role, accounts);
-					
-					// add the user to the list of users to return
-					allUsers.add(u);	
+
+
+					// We will cover Streams later, you're welcome to research this in the time being
+					// you don't need to use it unless you have queries that are as complex
+					List<User> potentialOwners = allUsers.stream()
+							.filter((u) -> u.getId() == userId) // (u) represents each element in the stream (think Collection, but different...why?) 
+							.collect(Collectors.toList()); // We are trying to find all of the users that have the same id
+
+
+					if (potentialOwners.isEmpty()) {
+						List<Account> ownedAccounts = new LinkedList<>();
+						ownedAccounts.add(a);
+						User u = new User(userId, username, password, role, ownedAccounts);
+						allUsers.add(u);
+						
+					} else {
+						// the owner of this account object already exists
+						User u = potentialOwners.get(0); // snag the first element from the  potential owners
+						// in the case that we already added the User to the list
+						// so that we DON'T add a duplicate User to the list
+						
+						u.addAccount(a); // add the account object to the user we returned
+
+					}
 				}
 			}
 		} catch (SQLException e) {
 			logger.warn("SQL exception thrown - can't retrieve all users from the DB");
 			e.printStackTrace();
 		}
+		
 		// this will return the list of users that we initially generated at the start of this method
 		// and populated with the Users pulled from the DB.
 		return allUsers;

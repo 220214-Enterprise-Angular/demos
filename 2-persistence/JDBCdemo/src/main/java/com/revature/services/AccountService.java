@@ -13,10 +13,15 @@ import com.revature.models.User;
 public class AccountService {
 	
 	// this is the dependency that the service uses to perform CRUD ops on Account objects
-	public IAccountDao adao = new AccountDaoImpl();
+	private IAccountDao adao;
 	
 	private static Scanner scan = new Scanner(System.in);
 	// The Service layer depends on the DAO to perform crud operations, and adds extra business logic
+	
+	public AccountService(AccountDaoImpl adaoImpl) {
+		
+		this.adao = adaoImpl;
+	}
 	
 	/**
 	 * Maybe in some menu, a user has the option to enter a number that will invoke thi

@@ -1,9 +1,11 @@
 package com.revature;
 
+import java.util.List;
 import java.util.Scanner;
 
 import org.apache.log4j.Logger;
 
+import com.revature.dao.UserDaoImpl;
 import com.revature.exceptions.RegisterUserFailedException;
 import com.revature.models.Role;
 import com.revature.models.User;
@@ -12,7 +14,7 @@ import com.revature.services.UserService;
 public class App {
 	
 	// we've instnatiated the UserService at the class level, so we can call on it in any of our methods below...
-	private static UserService uservice = new UserService();
+	private static UserService uservice = new UserService(new UserDaoImpl());
 
 	private static Logger logger = Logger.getLogger(App.class);
 	
@@ -23,6 +25,12 @@ public class App {
 //		ConnectionUtil.getConnection(); // for testing that you can indeed connect
 
 		menu();
+		
+		UserDaoImpl udao = new UserDaoImpl();
+		List<User> users = udao.findAll();
+		
+		users.forEach(u -> System.out.println(u));
+		
 		
 	}
 	

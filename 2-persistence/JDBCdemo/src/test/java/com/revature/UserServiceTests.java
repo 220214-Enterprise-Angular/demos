@@ -34,19 +34,15 @@ public class UserServiceTests {
 	
 	@Before // this annotation ensures that this test is run before every single unit test below
 	public void setup() {
-		
-		userv = new UserService();
-		
+
 		// Mock creates an object that has all the methods and properties of the class we're mocking (that's called a shell instance)
 		mockDao = mock(UserDaoImpl.class); // Mockito's mock() method builds an object that is an exact replica of an object of the class we're mocking
 		
+		userv = new UserService(mockDao);
+	
 		// our service layer depends on the dao
-		userv.udao = mockDao; // setting the User Service's UserDaoImpl to the imposter class (the mockDao)
+		// setting the User Service's UserDaoImpl to the imposter class (the mockDao)
 		
-		// setup a dummy object a.k.a stub
-		dummyUser = new User();
-		dummyUser.setAccounts(new LinkedList<Account>()); // this is an empty list
-		dummyUser.setId(0); // because all User objects created from the console have an id of 0 before they're persisted to the DB
 	}
 	
 	@After // after every unit test
@@ -57,81 +53,113 @@ public class UserServiceTests {
 		dummyUser = null;
 		
 	}
-	// unit tests with a void return type and are annotated with @Test
 	
-	// We want to test that we are unable to register a user with an id > 0.
-	// We want to test that IF we attempt to register a user with an id > 0, then our exception is thrown
-	
-	// you're expecting this exception to be thrown when the test runs
-	@Test(expected=RegisterUserFailedException.class)
-	public void test_name() {
+	/**
+	 * Happy Path Scenario: Everything works as expected
+	 * Return full record of User from DB based on username/password combo
+	 */
+	@Test
+	public void testSuccessfulLogin() {
 		
-		// set the dummyUser's id
-		dummyUser.setId(1);
+		dummyUser = new User(12, "hawkeye", "arrows", Role.Employee, null);
 		
-		// we need to define what happens WHEN the mockDao's method's are called
+		String loginUsername = "hawkeye";
+		String loginPassword = "arrows";
+		
 		/**
-		 * WHEN the service layer's dao calls the findByUsername method,
-		 * this is the data the mock dao should return.
+		 * What method's get's called in the login method in the Service layer?
+		 * How can we intercept the calls to the database? 
 		 * 
-		 * thenReturn is the mock data we're providing in place of the actual data in the database.
+		 * findByUsername() get's called by the Service Layer - let's mock it!
 		 */
-
-	    when(mockDao.findByUsername(dummyUser.getUsername())).thenReturn(dummyUser); // return an empty object
-	
-		// invoke the method which we expect to throw the exception
-		userv.register(dummyUser); 
+		
+		// WHEN the mockDao's findByUsername() gets called, THEN return the dummyuser;
+		when(mockDao.findByUsername(loginUsername)).thenReturn(dummyUser);
+		
+		User expectedUser = dummyUser;
+		User actualReturnedUser =  userv.login("hawkeye", "arrows");
+		
+		assertEquals(expectedUser, actualReturnedUser);
+		
 	}
 	
-	@Test // we're testing the register method
+	/**
+	 * Must return null if the username and password passed to 
+	 * the login method are not the same as the username & 
+	 * password of the User returned by the Login method.
+	 */
+	@Test
+	public void testFailedLogin() {
+		
+		dummyUser = new User(12, "hawkeye", "arrows", Role.Employee, null);
+		
+		String loginUsername = "hawkeye";
+		String loginPassword = "balloons";
+		
+		// WHEN the mockDao's findByUsername() gets called, THEN return the dummyuser;
+		when(mockDao.findByUsername(loginUsername)).thenReturn(dummyUser);
+		
+		User actualReturnedUser = userv.login(loginUsername, loginPassword);
+		
+		// We should assume that the User returned by this method will be null 
+		assertNull(actualReturnedUser);
+	}
+	
+	
+	/**
+	 * Happy Path Scenario for registering a new user
+	 * Test that we properly return the User with the id set 
+	 * as whatever the DAO returns as the Primary Key
+	 */
+	@Test 
 	public void testRegisterUser_returnNewPkAsId() {
 		
 		// build a valid user to register
-		dummyUser = new User(0, "spongebob", "pass", Role.Customer, new LinkedList<Account>());
+		dummyUser = new User(0, "spongebob", "pass", Role.Customer, null);
 		
 		// we're going to fake the value of a primary key that the DB would generate		
 		
 		// randomly generate a number which we'll pretend that the DB geenrated
 		Random r = new Random();
-		int fakePk = r.nextInt(100); // sets the random number ot be anywhere between 1 - 100;
+		int expectedId  = r.nextInt(100); // sets the random number to be anywhere between 1 - 100;
 	
 		
-		// firs the dao is called upon to check if the user's already in the DB
+		// first the dao is called upon to check if the user's already in the DB
+		// we return an empty user because we're pretending it ISN'T in the DB
 		when(mockDao.findByUsername(dummyUser.getUsername())).thenReturn(new User());
 		
-		// we need to say that WHEN we insert the dummyUserm then return the randomly generated number as PK
-		when(mockDao.insert(dummyUser)).thenReturn(fakePk);
+		// we need to say that WHEN we insert the dummyUser then return the randomly generated number as PK
+		when(mockDao.insert(dummyUser)).thenReturn(expectedId);
 		
 		// register the user (the returned value of the method)
 		User registeredUser = userv.register(dummyUser);
-	
+		int actualId =  registeredUser.getId();
 		
-		// then check that the registered user's id is equal to the fakePK
+		// then check that the registered user's actual id is equal to the fakePK
 		// we want to assert equality of the User's id that register() method returns.
-		assertEquals(fakePk, registeredUser.getId());
-		
-				     // expected, actual 
-	}
+		assertEquals(expectedId, actualId);
 
+	}	
 	
-	@Test
-	public void testIncorrectUsernamePassword_returnsNull() {
+	
+	/**
+	 * Test that a RegisterUserFailedException is thrown 
+	 * We don't use assertions in this case.  Instead we
+	 * add an exception expectation and run it.
+	 */
+	@Test(expected=RegisterUserFailedException.class)
+	public void testRegisterUser_idIsGreaterThanZero_throwsException() {
 		
-		// provide the dummy data for the dao to return
+		// Set our stub to a User that we pretend has an ID > 0
+		// and already exists in the DB
+		dummyUser = new User(2, "wanda", "vision", Role.Admin, null);
 		
-		// build dummUser with a different password (but username) than the password passed to the login method
-		dummyUser.setUsername("x");
-		dummyUser.setPwd("z");
+		// when the dao calls the findByUsername() method, we return the
+		// above user
+		when(mockDao.findByUsername(dummyUser.getUsername())).thenReturn(dummyUser);
 		
-		
-		when(mockDao.findByUsername("x")).thenReturn(dummyUser);
-		
-		// the login method will approve 
-		
-		
-		assertNull(userv.login("x", "y"));
-		
+		userv.register(dummyUser); // this should throw an exception		
 	}
 	
-
+	
 }

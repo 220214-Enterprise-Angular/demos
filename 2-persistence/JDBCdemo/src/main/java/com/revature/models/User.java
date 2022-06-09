@@ -46,6 +46,14 @@ public class User implements Serializable { // Serialization is the process of b
 		this.role = role;
 		this.accounts = accounts;
 	}
+	
+	// add this method
+	public boolean addAccount(Account a) {
+		
+		return this.accounts.add(a);
+		
+	}
+	
 
 	public int getId() {
 		return id;

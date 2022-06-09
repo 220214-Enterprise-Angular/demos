@@ -25,11 +25,8 @@ public class AccountServiceTests {
 	@Before
 	public void setup() {
 	
-		aserv = new AccountService();
 		mockDao = mock(AccountDaoImpl.class);
-		
-		// set the dao that the Account Service relies on == to mockDao
-		aserv.adao = mockDao; // adao is the property of AccountService that's = the DaoImpl that the service relies on
+		aserv = new AccountService(mockDao);
 		
 	}
 	
@@ -56,7 +53,7 @@ public class AccountServiceTests {
 
 		// create Account b, and Account a, then add them to the linkedList
 		Account a = new Account(1, 100, dummyUser.getId() , false);
-		Account b = new Account(1, 100, dummyUser.getId(), false);
+		Account b = new Account(2, 200, dummyUser.getId(), false);
 		
 		bobsAccounts.add(a);
 		bobsAccounts.add(b);

@@ -11,7 +11,18 @@ public class UserService {
 	
 	private static Logger logger = Logger.getLogger(UserService.class);
 	// UserService DEPENDS on the UserDaoImpl...so therefore we will inject a dependency into this class
-	public IUserDao udao = new UserDaoImpl();
+	private IUserDao udao;
+	
+	
+	// define a constructor that says: whenever we build a UserService
+	// we INJECT it's dependencies - constructor injection
+	
+	public UserService(UserDaoImpl udaoImpl) {
+		
+		this.udao = udaoImpl;
+		
+	}
+
 	
 	public User register(User u) {
 		
@@ -19,7 +30,7 @@ public class UserService {
 		String username = u.getUsername();
 		
 		// TO check that the user DOESN'T exist, call findUserByUsername() method and see what it returns
-		User possibleUser = udao.findByUsername(username); // this now reutnrs either an empty User object OR the fully initialized User object
+		User possibleUser = udao.findByUsername(username); // this now returns either an empty User object OR the fully initialized User object
 		
 		// does it exist already? Run some checks on its ID. As is possibleUser's ID > 0 or == 0?
 		if (possibleUser.getId() == 0) { // this means that the user doesn't exist in the DB and we can register it
