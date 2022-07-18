@@ -41,7 +41,7 @@ ssh -i "team-x-e211129.pem" ec2-user@<Your EC2 IP>.compute-1.amazonaws.com
 
 4. After running the above `ssh` command, type yes if prompted to continue connecting.
   
-> *I have installed the JDK 8, Maven ([the right version](https://memotut.com/aws-ec2-how-to-install-maven-on-amazon-linux-2-bcdf9/)), Git, and Docker on your instance.  All you need to do is deploy your containerized app as follows:*
+> *You must install the JDK 8, Maven ([the right version](https://memotut.com/aws-ec2-how-to-install-maven-on-amazon-linux-2-bcdf9/)), Git, and Docker on your instance.  All you need to do is deploy your containerized app as follows:*
 
 <br>
 <br>
