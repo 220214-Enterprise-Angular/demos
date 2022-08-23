@@ -1,0 +1,15 @@
+2022-08-23 05:28:23.984  INFO 21252 --- [main] com.revature.SpringAopApplication        : Starting SpringAopApplication using Java 1.8.0_251 on Rev-LR0BSMBN with PID 21252 (C:\Users\SophieGavrila\Desktop\220214\demos\5-spring\spring-aop\target\classes started by SophieGavrila in C:\Users\SophieGavrila\Desktop\220214\demos\5-spring\spring-aop)
+2022-08-23 05:28:23.986  INFO 21252 --- [main] com.revature.SpringAopApplication        : No active profile set, falling back to 1 default profile: "default"
+2022-08-23 05:28:24.695  INFO 21252 --- [main] com.revature.SpringAopApplication        : Started SpringAopApplication in 1.054 seconds (JVM running for 2.041)
+2022-08-23 05:28:24.748  INFO 21252 --- [main] eAspect$$EnhancerBySpringCGLIB$$606e6dff : Checking for user access...
+2022-08-23 05:28:24.756  INFO 21252 --- [main] eAspect$$EnhancerBySpringCGLIB$$606e6dff : Intercepted method call of execution(String com.revature.data.Dao1.retrieveSomething())
+2022-08-23 05:28:24.763  INFO 21252 --- [main] nAspect$$EnhancerBySpringCGLIB$$52943532 : The time taken for execution(String com.revature.service.Service1.calculateSomething()) to execute is 24 milliseconds
+2022-08-23 05:28:24.764  INFO 21252 --- [main] rAspect$$EnhancerBySpringCGLIB$$7f805ace : execution(String com.revature.service.Service1.calculateSomething()) returned value null
+2022-08-23 05:28:24.764  INFO 21252 --- [main] rAspect$$EnhancerBySpringCGLIB$$7f805ace : after execution of execution(String com.revature.service.Service1.calculateSomething())
+2022-08-23 05:28:24.764  INFO 21252 --- [main] ication$$EnhancerBySpringCGLIB$$6a0eba8b : null
+2022-08-23 05:28:24.767  INFO 21252 --- [main] eAspect$$EnhancerBySpringCGLIB$$606e6dff : Checking for user access...
+2022-08-23 05:28:24.768  INFO 21252 --- [main] eAspect$$EnhancerBySpringCGLIB$$606e6dff : Intercepted method call of execution(String com.revature.data.Dao2.retrieveSomething())
+2022-08-23 05:28:24.770  INFO 21252 --- [main] nAspect$$EnhancerBySpringCGLIB$$52943532 : The time taken for execution(String com.revature.service.Service2.calculateSomething()) to execute is 6 milliseconds
+2022-08-23 05:28:24.771  INFO 21252 --- [main] rAspect$$EnhancerBySpringCGLIB$$7f805ace : execution(String com.revature.service.Service2.calculateSomething()) returned value null
+2022-08-23 05:28:24.771  INFO 21252 --- [main] rAspect$$EnhancerBySpringCGLIB$$7f805ace : after execution of execution(String com.revature.service.Service2.calculateSomething())
+2022-08-23 05:28:24.771  INFO 21252 --- [main] ication$$EnhancerBySpringCGLIB$$6a0eba8b : null
